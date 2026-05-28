@@ -1,6 +1,4 @@
-import React from 'react';
 import { Check, Minus, School, Smartphone, Bus } from 'lucide-react';
-import Testimonials from '../components/common/Testimonials';
 
 const Plans = ({ setCurrentPage }) => {
   const plansData = [
@@ -219,8 +217,6 @@ const Plans = ({ setCurrentPage }) => {
           </p>
         </div>
       </div>
-
-      <Testimonials />
 
       {/* Pitch CTA */}
       <div className="bg-[#f8fafc] rounded-[3rem] p-12 text-center max-w-4xl 3xl:max-w-5xl mx-auto border border-slate-100 shadow-sm mt-12">

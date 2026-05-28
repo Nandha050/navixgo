@@ -19,26 +19,10 @@ const Footer = ({ setCurrentPage, handleNavClick, controlRoomUnlocked }) => {
             <ul className="space-y-4">
               <li>
                 <button
-                  onClick={() => handleNavClick('how-it-works')}
-                  className="text-slate-400 hover:text-white transition-colors font-medium text-sm 3xl:text-base text-left"
-                >
-                  How it works
-                </button>
-              </li>
-              <li>
-                <button
                   onClick={() => handleNavClick('features')}
                   className="text-slate-400 hover:text-white transition-colors font-medium text-sm 3xl:text-base text-left"
                 >
                   Features
-                </button>
-              </li>
-              <li>
-                <button
-                  onClick={() => handleNavClick('testimonials')}
-                  className="text-slate-400 hover:text-white transition-colors font-medium text-sm 3xl:text-base text-left"
-                >
-                  Testimonials
                 </button>
               </li>
               <li>
@@ -51,7 +35,15 @@ const Footer = ({ setCurrentPage, handleNavClick, controlRoomUnlocked }) => {
               </li>
               <li>
                 <button
-                  onClick={() => handleNavClick('contact')}
+                  onClick={() => setCurrentPage('about-us')}
+                  className="text-slate-400 hover:text-white transition-colors font-medium text-sm 3xl:text-base text-left"
+                >
+                  About Us
+                </button>
+              </li>
+              <li>
+                <button
+                  onClick={() => setCurrentPage('contact-us')}
                   className="text-slate-400 hover:text-white transition-colors font-medium text-sm 3xl:text-base text-left"
                 >
                   Contact
@@ -59,10 +51,18 @@ const Footer = ({ setCurrentPage, handleNavClick, controlRoomUnlocked }) => {
               </li>
               <li>
                 <button
-                  onClick={() => handleNavClick('about-us')}
+                  onClick={() => setCurrentPage('privacy-policy')}
                   className="text-slate-400 hover:text-white transition-colors font-medium text-sm 3xl:text-base text-left"
                 >
-                  About us
+                  Privacy Policy
+                </button>
+              </li>
+              <li>
+                <button
+                  onClick={() => setCurrentPage('terms-of-service')}
+                  className="text-slate-400 hover:text-white transition-colors font-medium text-sm 3xl:text-base text-left"
+                >
+                  Terms of Service
                 </button>
               </li>
             </ul>
@@ -87,10 +87,10 @@ const Footer = ({ setCurrentPage, handleNavClick, controlRoomUnlocked }) => {
                   </svg>
                 </div>
                 <a
-                  href="mailto:hello@navixgo.com"
+                  href="mailto:navixgosupport@gmail.com"
                   className="text-slate-400 hover:text-white transition-colors font-medium text-sm 3xl:text-base"
                 >
-                  hello@navixgo.com
+                  navixgosupport@gmail.com
                 </a>
               </li>
               <li className="flex items-center gap-3">
@@ -108,7 +108,7 @@ const Footer = ({ setCurrentPage, handleNavClick, controlRoomUnlocked }) => {
                     <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
                   </svg>
                 </div>
-                <span className="text-slate-400 font-medium text-sm 3xl:text-base">+62 435 93987</span>
+                <span className="text-slate-400 font-medium text-sm 3xl:text-base">+91 9949445524, 9381837737</span>
               </li>
               <li className="flex items-start gap-3">
                 <div className="text-slate-400 bg-slate-800 p-1.5 rounded-full mt-0.5">
@@ -127,9 +127,7 @@ const Footer = ({ setCurrentPage, handleNavClick, controlRoomUnlocked }) => {
                   </svg>
                 </div>
                 <span className="text-slate-400 font-medium leading-relaxed text-sm 3xl:text-base">
-                  8796 Streets 31 1st floor, Semarang,
-                  <br />
-                  Indonesia.
+                  Sangareddy, Telangana, 502001
                 </span>
               </li>
             </ul>
@@ -178,12 +176,18 @@ const Footer = ({ setCurrentPage, handleNavClick, controlRoomUnlocked }) => {
         <div className="border-t border-slate-900 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-slate-500 text-sm 3xl:text-base font-medium">© 2026 NavixGo LLC. All rights reserved.</p>
           <div className="flex gap-6">
-            <a href="#" className="text-slate-500 hover:text-white text-sm 3xl:text-base font-medium transition-colors">
+            <button
+              onClick={() => setCurrentPage('privacy-policy')}
+              className="text-slate-500 hover:text-white text-sm 3xl:text-base font-medium transition-colors"
+            >
               Privacy Policy
-            </a>
-            <a href="#" className="text-slate-500 hover:text-white text-sm 3xl:text-base font-medium transition-colors">
-              Term of Services
-            </a>
+            </button>
+            <button
+              onClick={() => setCurrentPage('terms-of-service')}
+              className="text-slate-500 hover:text-white text-sm 3xl:text-base font-medium transition-colors"
+            >
+              Terms of Service
+            </button>
           </div>
         </div>
       </div>

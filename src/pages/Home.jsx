@@ -180,72 +180,6 @@ const Home = ({ setCurrentPage }) => {
             </div>
           </div>
         </div>
-
-        {/* The Problem We Are Solving Section */}
-        <div id="how-it-works" className="mt-12 sm:mt-24 mb-8 sm:mb-12 text-center max-w-4xl 3xl:max-w-5xl mx-auto px-4">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-red-50 text-black-600 text-xs sm:text-sm 3xl:text-base font-bold mb-6 border border-red-100 select-none">
-            <AlertTriangle size={16} />
-            <span>The Problem We're Solving</span>
-          </div>
-          <h2 className="text-2xl sm:text-3xl lg:text-[44px] 3xl:text-[50px] font-bold text-slate-900 mb-4 sm:mb-6 leading-tight tracking-tight">
-            Traditional GPS tracking is expensive & unreliable.
-          </h2>
-          <p className="text-sm sm:text-base lg:text-lg 3xl:text-xl text-slate-600 leading-relaxed max-w-3xl 3xl:max-w-4xl mx-auto mb-8 font-medium">
-            Educational institutions struggle with hefty hardware costs and maintenance for dedicated GPS devices on buses. Meanwhile, students and parents face daily anxiety waiting at stops with no visibility into actual arrival times or sudden delays.
-          </p>
-        </div>
-
-        {/* Competitive Prices Row */}
-        <div className="mt-8 grid grid-cols-1 lg:grid-cols-12 gap-6">
-          <div className="lg:col-span-7 bg-[#0056b3] rounded-2xl sm:rounded-[2.5rem] p-6 sm:p-10 3xl:p-14 text-white flex flex-col justify-center shadow-lg border border-blue-400/20">
-            <h3 className="text-xl sm:text-2xl lg:text-4xl 3xl:text-5xl font-bold mb-3 sm:mb-4 leading-tight">
-              There are systems that offer
-              <br />
-              nearby listings and
-              <br />
-              competitive prices
-            </h3>
-            <p className="text-blue-100 text-sm sm:text-base lg:text-lg 3xl:text-xl font-medium">
-              But only NavixGo does it without hardware.
-            </p>
-          </div>
-          <div className="lg:col-span-5 grid grid-cols-1 sm:grid-cols-2 gap-6">
-            <div className="bg-white rounded-2xl sm:rounded-[2.5rem] p-6 sm:p-8 shadow-[0_15px_35px_-15px_rgba(0,0,0,0.1)] border border-slate-100 flex flex-col justify-center text-center items-center hover:scale-[1.02] transition-transform duration-300">
-              <p className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 mb-2">99%</p>
-              <p className="text-slate-500 font-bold text-xs sm:text-sm lg:text-base leading-snug">
-                Accurate data based
-                <br />
-                on our system
-              </p>
-              <div className="flex gap-2 mt-6 w-full justify-center select-none">
-                <div className="w-10 h-3.5 bg-[#0b101e] rounded-md"></div>
-                <div className="w-10 h-3.5 bg-[#0b101e] rounded-md"></div>
-              </div>
-            </div>
-            <div className="bg-white rounded-2xl sm:rounded-[2.5rem] p-6 sm:p-8 shadow-[0_15px_35px_-15px_rgba(0,0,0,0.1)] border border-slate-100 flex flex-col justify-center text-center items-center hover:scale-[1.02] transition-transform duration-300">
-              <p className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 mb-2">570K+</p>
-              <p className="text-slate-500 font-bold text-xs sm:text-sm lg:text-base leading-snug">
-                Users actively using
-                <br />
-                the application
-              </p>
-              <div className="flex -space-x-2 mt-6 justify-center select-none">
-                {[1, 2, 3, 4].map((i) => (
-                  <div
-                    key={i}
-                    className="w-8 h-8 rounded-full border-2 border-white bg-slate-200 overflow-hidden shadow-sm"
-                  >
-                    <img
-                      src={`https://api.dicebear.com/7.x/avataaars/svg?seed=${i + 10}`}
-                      alt="user"
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
       </section>
 
       {/* Feature 1: Passenger App */}
@@ -629,108 +563,41 @@ const Home = ({ setCurrentPage }) => {
         </div>
       </section>
 
-      {/* Modern Cream Download App Section */}
-      <section id="about-us" className="py-8 sm:py-12 px-4 sm:px-6 lg:px-8 max-w-[94%] 2xl:max-w-[96%] 3xl:max-w-[98%] mx-auto">
-        <div className="bg-[#f4f1ea] rounded-[2rem] sm:rounded-[3rem] p-6 sm:p-10 lg:p-12 xl:p-16 flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-6 overflow-hidden shadow-[0_15px_35px_-10px_rgba(0,0,0,0.03)] border border-[#e5dfd3] relative">
-          {/* Left Column: Text */}
-          <div className="w-full lg:w-[38%] text-left flex flex-col items-start z-10">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl 3xl:text-[72px] font-black text-slate-900 tracking-tight leading-tight sm:leading-none mb-4 sm:mb-6">
-              Loved by
-              <br />
-              96 million
-              <br />
-              people
-            </h2>
-
-            {/* Premium Purple Star Rating */}
-            <div className="flex gap-1.5 mb-6 sm:mb-8 select-none">
-              {[1, 2, 3, 4].map((star) => (
-                <svg key={star} className="w-6 h-6 sm:w-8 sm:h-8 text-[#7c3aed] fill-current" viewBox="0 0 20 20">
-                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                </svg>
-              ))}
-              {/* Half-colored SVG Star for ~4.8 overall score */}
-              <svg className="w-6 h-6 sm:w-8 sm:h-8 text-[#7c3aed]" viewBox="0 0 20 20">
-                <defs>
-                  <linearGradient id="purpleHalfStar">
-                    <stop offset="85%" stopColor="#7c3aed" />
-                    <stop offset="85%" stopColor="#d1d5db" />
-                  </linearGradient>
-                </defs>
-                <path
-                  fill="url(#purpleHalfStar)"
-                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
-                />
-              </svg>
-            </div>
-
-            {/* Apple App Store & Google Play Pill Badges */}
-            <div className="flex flex-wrap gap-3 sm:gap-4 mt-2 select-none">
-              <a
-                href="#"
-                onClick={(e) => e.preventDefault()}
-                className="flex items-center gap-2.5 sm:gap-3 bg-black text-white px-4 py-2.5 sm:px-5 sm:py-3 rounded-xl sm:rounded-2xl hover:scale-105 active:scale-95 transition-all shadow-md shrink-0 border border-neutral-800"
-              >
-                <svg className="w-5 h-5 sm:w-6 sm:h-6 fill-current text-white" viewBox="0 0 24 24">
-                  <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.97 4.17c.66-.81 1.11-1.93.99-3.06-1 .04-2.17.67-2.88 1.49-.6.69-1.13 1.83-1 2.96 1.07.08 2.19-.55 2.89-1.39z" />
-                </svg>
-                <div className="text-left leading-none">
-                  <p className="text-[8px] sm:text-[9px] uppercase font-semibold text-slate-400 tracking-wider">Download on the</p>
-                  <p className="text-xs sm:text-sm font-extrabold mt-0.5">App Store</p>
-                </div>
-              </a>
-              <a
-                href="#"
-                onClick={(e) => e.preventDefault()}
-                className="flex items-center gap-2.5 sm:gap-3 bg-black text-white px-4 py-2.5 sm:px-5 sm:py-3 rounded-xl sm:rounded-2xl hover:scale-105 active:scale-95 transition-all shadow-md shrink-0 border border-neutral-800"
-              >
-                {/* Clean, high-fidelity native Google Play Store SVG path */}
-                <svg className="w-5 h-5 sm:w-6 sm:h-6 text-white" viewBox="0 0 24 24" fill="none">
-                  <path
-                    d="M3.253 3.518C3.09 3.824 3 4.184 3 4.582v14.836c0 .398.09.758.253 1.064L11.53 12 3.253 3.518z"
-                    fill="#3b82f6"
-                  />
-                  <path
-                    d="M14.935 8.63L3.253 3.518c.27-.16.574-.242.887-.242.476 0 .937.183 1.285.508L14.935 8.63z"
-                    fill="#10b981"
-                  />
-                  <path
-                    d="M14.935 15.37L5.425 20.22c-.348.325-.81.508-1.286.508-.312 0-.616-.082-.887-.243L14.935 15.37z"
-                    fill="#ef4444"
-                  />
-                  <path
-                    d="M20.61 11.23c.52.26.52.88 0 1.14l-5.675 3.002-3.405-3.372 3.405-3.372L20.61 11.23z"
-                    fill="#f59e0b"
-                  />
-                </svg>
-                <div className="text-left leading-none">
-                  <p className="text-[8px] sm:text-[9px] uppercase font-semibold text-slate-400 tracking-wider">GET IT ON</p>
-                  <p className="text-xs sm:text-sm font-extrabold mt-0.5">Google Play</p>
-                </div>
-              </a>
-            </div>
-          </div>
-
-          {/* Middle Column: Isometric buses graphic */}
-          <div className="hidden lg:flex w-full lg:w-[34%] justify-center items-center z-10 select-none">
-            <img
-              src={busesimg}
-              alt="Futuristic Smart Transit Graphic"
-              className="w-full h-auto max-h-[300px] lg:max-h-[340px] xl:max-h-[400px] object-contain"
+      {/* Google Play Download Area */}
+      <div id="download-area" className="py-16 text-center select-none flex flex-col items-center justify-center">
+        <h3 className="text-2xl sm:text-3xl font-extrabold text-slate-900 mb-6 tracking-tight">
+          Download the NavixGo App
+        </h3>
+        <a
+          href="#"
+          onClick={(e) => e.preventDefault()}
+          className="flex items-center gap-3 bg-black text-white px-6 py-3.5 sm:px-8 sm:py-4 rounded-2xl hover:scale-105 active:scale-95 transition-all shadow-xl shrink-0 border border-neutral-800"
+        >
+          {/* Clean, high-fidelity native Google Play Store SVG path */}
+          <svg className="w-6 h-6 sm:w-8 sm:h-8 text-white" viewBox="0 0 24 24" fill="none">
+            <path
+              d="M3.253 3.518C3.09 3.824 3 4.184 3 4.582v14.836c0 .398.09.758.253 1.064L11.53 12 3.253 3.518z"
+              fill="#3b82f6"
             />
-          </div>
-
-          {/* Right Column: Phone Mockup */}
-          <div className="w-full lg:w-[28%] flex justify-center lg:justify-end items-center z-10 lg:translate-y-8 select-none">
-            <img
-              src={phoneHandMockup}
-              alt="Phone in hand"
-              className="w-[240px] sm:w-[280px] md:w-[320px] lg:w-[260px] xl:w-[320px] h-auto object-contain drop-shadow-2xl"
+            <path
+              d="M14.935 8.63L3.253 3.518c.27-.16.574-.242.887-.242.476 0 .937.183 1.285.508L14.935 8.63z"
+              fill="#10b981"
             />
+            <path
+              d="M14.935 15.37L5.425 20.22c-.348.325-.81.508-1.286.508-.312 0-.616-.082-.887-.243L14.935 15.37z"
+              fill="#ef4444"
+            />
+            <path
+              d="M20.61 11.23c.52.26.52.88 0 1.14l-5.675 3.002-3.405-3.372 3.405-3.372L20.61 11.23z"
+              fill="#f59e0b"
+            />
+          </svg>
+          <div className="text-left leading-none">
+            <p className="text-[9px] uppercase font-semibold text-slate-400 tracking-wider">GET IT ON</p>
+            <p className="text-sm sm:text-base font-extrabold mt-1">Google Play</p>
           </div>
-        </div>
-      </section>
-      <Testimonials />
+        </a>
+      </div>
 
       {/* Bottom CTA Section (Shrinked & Simplified) */}
       <section id="contact" className="py-8 sm:py-10 px-4 sm:px-6 lg:px-8 max-w-[94%] sm:max-w-[85%] 2xl:max-w-[88%] 3xl:max-w-[90%] mx-auto">
@@ -744,6 +611,7 @@ const Home = ({ setCurrentPage }) => {
             <p className="text-blue-100 text-sm sm:text-base lg:text-lg mb-6 leading-relaxed max-w-sm md:max-w-md font-medium 3xl:text-xl">
               Try the application, improve transport transparency, and optimize fleet monitoring without the hefty hardware costs.
             </p>
+
             <form
               onSubmit={handleGetAccess}
               className="flex flex-col sm:flex-row bg-white p-1.5 sm:p-1 rounded-2xl sm:rounded-full w-full max-w-sm shadow-md border border-white"

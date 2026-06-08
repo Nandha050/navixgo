@@ -149,7 +149,7 @@ const Plans = ({ setCurrentPage }) => {
               ))}
             </ul>
             <button
-              onClick={() => { window.location.href = 'https://where-are-you-admin-frontend.vercel.app/'; }}
+              onClick={() => { window.location.href = 'https://navixgo.in/plans'; }}
               className={`w-full py-3 rounded-xl font-bold transition-all active:scale-95 duration-200 select-none ${plan.btn}`}
             >
               Select Plan
@@ -228,7 +228,7 @@ const Plans = ({ setCurrentPage }) => {
           ETA updates, and student notifications using driver smartphones as live GPS devices.”
         </h2>
         <button
-          onClick={() => { window.location.href = 'https://where-are-you-admin-frontend.vercel.app/'; }}
+          onClick={() => { window.location.href = 'https://navixgo.in/plans'; }}
           className="bg-[#0056b3] text-white px-10 py-4 rounded-full font-bold hover:bg-[#004494] active:scale-95 transition-all shadow-md text-lg 3xl:text-xl select-none"
         >
           Start Free Trial Now

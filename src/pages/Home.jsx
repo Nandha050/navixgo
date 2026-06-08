@@ -23,7 +23,7 @@ import transitBusBg from '../assets/transit_bus_bg.png';
 const Home = ({ setCurrentPage }) => {
   const handleGetAccess = (e) => {
     e.preventDefault();
-    window.location.href = 'https://where-are-you-admin-frontend.vercel.app/';
+    window.location.href = 'https://navixgo.in/login/';
   };
 
   return (
@@ -143,7 +143,7 @@ const Home = ({ setCurrentPage }) => {
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <button
-                onClick={() => { window.location.href = 'https://where-are-you-admin-frontend.vercel.app/'; }}
+                onClick={() => { window.location.href = 'https://navixgo.in/login/'; }}
                 className="w-full sm:w-auto bg-[#2563eb] text-white font-semibold px-8 py-4 rounded-full hover:bg-blue-600 active:scale-95 transition-all shadow-lg shadow-blue-500/30 flex items-center justify-center gap-2 text-lg 3xl:text-xl"
               >
                 Get Started

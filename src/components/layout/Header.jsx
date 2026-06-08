@@ -69,7 +69,7 @@ const Header = ({
               Download App
             </button>
             <button
-              onClick={() => { window.location.href = 'https://where-are-you-admin-frontend.vercel.app/'; }}
+              onClick={() => { window.location.href = 'https://navixgo.in/login'; }}
               className="bg-gradient-to-b from-[#0056b3] to-[#004494] text-white text-xs lg:text-sm 3xl:text-base font-bold px-3 py-2 lg:px-5 lg:py-2.5 xl:px-7 xl:py-3 rounded-full hover:shadow-[0_8px_20px_rgba(0,86,179,0.3)] hover:scale-105 hover:-translate-y-0.5 active:scale-95 transition-all shadow-[0_4px_10px_rgba(0,86,179,0.2)] whitespace-nowrap"
             >
               Login/Register
@@ -148,7 +148,7 @@ const Header = ({
             </button>
             <button
               onClick={() => {
-                window.location.href = 'https://where-are-you-admin-frontend.vercel.app/';
+                window.location.href = 'https://navixgo.in/login';
                 setIsMobileMenuOpen(false);
               }}
               className="bg-[#0056b3] text-white text-lg font-bold px-4 py-3 rounded-xl w-full shadow-lg text-center"

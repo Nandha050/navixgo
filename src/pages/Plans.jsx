@@ -85,7 +85,6 @@ const Plans = () => {
       text: 'text-slate-900',
       btn: 'bg-[#ea580c] text-white hover:bg-[#c24100] shadow-md hover:shadow-xl shadow-orange-500/20',
       btnText: 'Choose Half-Yearly',
-      scale: 'lg:scale-105 z-10',
       features: [
         'Everything in Quarterly',
         'Dedicated Onboarding Assistance',
@@ -172,7 +171,7 @@ const Plans = () => {
   ];
 
   return (
-    <div className="pt-12 pb-20 px-4 sm:px-6 lg:px-8 max-w-[94%] 2xl:max-w-[96%] 3xl:max-w-[98%] mx-auto w-full">
+    <div className="pt-12 pb-20 px-4 sm:px-6 lg:px-8 max-w-7xl 2xl:max-w-[1600px] mx-auto w-full overflow-x-hidden">
       <div className="text-center mb-16 select-none">
         <h1 className="text-3xl sm:text-4xl md:text-5xl 3xl:text-6xl font-700 font-satoshi text-slate-900 tracking-tight mb-4">
           NavixGo Membership Plans
@@ -188,7 +187,7 @@ const Plans = () => {
           const plan = plansData[0]; // Freemium
           return (
             <div
-              className={`w-full max-w-[340px] xl:max-w-[360px] rounded-[2.5rem] p-8 flex flex-col shadow-sm hover:shadow-xl transition-all duration-300 ${plan.color} ${plan.border || ''} ${plan.text}`}
+              className={`w-full min-w-0 max-w-[340px] xl:max-w-[360px] rounded-[2.5rem] p-8 flex flex-col shadow-sm hover:shadow-xl transition-all duration-300 ${plan.color} ${plan.border || ''} ${plan.text}`}
             >
               <div className="mb-6 text-center">
                 <h3 className={`text-2xl lg:text-3xl font-700 font-satoshi mb-2 ${plan.text}`}>{plan.name}</h3>
@@ -199,7 +198,7 @@ const Plans = () => {
                 <p className="text-sm opacity-90 leading-relaxed font-medium min-h-[40px]">{plan.desc}</p>
               </div>
 
-              <ul className="grid grid-cols-2 gap-x-4 gap-y-3 mb-8 flex-1 text-left border-t border-slate-200/20 pt-6">
+              <ul className="grid grid-cols-1 2xl:grid-cols-2 gap-x-4 gap-y-3 mb-8 flex-1 text-left border-t border-slate-200/20 pt-6 min-w-0">
                 {plan.features.map((f, j) => (
                   <li key={j} className="flex items-start gap-2 text-sm">
                     <Check className="w-4 h-4 shrink-0 mt-0.5 opacity-90 text-green-500" strokeWidth={3} />
@@ -220,11 +219,11 @@ const Plans = () => {
       </div>
 
       {/* Paid Pricing Cards */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 mb-24 items-stretch">
+      <div className="grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-4 gap-6 lg:gap-8 mb-24 items-stretch">
         {plansData.slice(1).map((plan, i) => (
           <div
             key={i}
-            className={`w-full rounded-[2.5rem] p-8 relative flex flex-col h-full shadow-sm hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 ${plan.color} ${plan.border || ''} ${plan.text} ${plan.scale || ''}`}
+            className={`w-full min-w-0 rounded-[2rem] p-6 lg:p-7 xl:p-8 relative flex flex-col h-full shadow-sm hover:shadow-2xl transition-all duration-300 ${plan.color} ${plan.border || ''} ${plan.text}`}
           >
             {/* Top Badges */}
             <div className="flex flex-col gap-2 mb-6 h-12">
@@ -252,7 +251,7 @@ const Plans = () => {
               <p className="text-sm opacity-90 leading-relaxed font-medium min-h-[40px]">{plan.desc}</p>
             </div>
 
-            <ul className="grid grid-cols-2 gap-x-4 gap-y-3 mb-8 flex-1 text-left border-t border-slate-200/20 pt-6">
+            <ul className="grid grid-cols-1 2xl:grid-cols-2 gap-x-4 gap-y-3 mb-8 flex-1 text-left border-t border-slate-200/20 pt-6 min-w-0">
               {plan.features.map((f, j) => (
                 <li key={j} className="flex items-start gap-2 text-[13px] xl:text-sm">
                   <Check className="w-4 h-4 shrink-0 mt-0.5 opacity-90 text-green-500" strokeWidth={3} />

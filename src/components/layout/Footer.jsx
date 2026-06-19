@@ -146,7 +146,9 @@ const Footer = ({ controlRoomUnlocked }) => {
                 </svg>
               </a>
               <a
-                href="#"
+                href="https://www.instagram.com/navixgo/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-8 h-8 rounded-full bg-gradient-to-tr from-[#f09433] via-[#e6683c] to-[#bc1888] flex items-center justify-center text-white hover:opacity-90 transition-opacity shadow-sm"
               >
                 <svg
@@ -165,7 +167,9 @@ const Footer = ({ controlRoomUnlocked }) => {
                 </svg>
               </a>
               <a
-                href="#"
+                href="https://www.linkedin.com/company/navixgo/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-8 h-8 rounded-full bg-[#0A66C2] flex items-center justify-center text-white hover:opacity-90 transition-opacity shadow-sm"
               >
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">

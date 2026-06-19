@@ -36,14 +36,14 @@ const Header = ({
             <Logo onClick={() => navigate('/')} />
           </div>
 
-          <div className="hidden lg:flex justify-center min-w-0">
+          <div className="hidden md:flex justify-center min-w-0">
             <motion.div
-              className="flex items-center rounded-full bg-white/95 px-5 lg:px-8 py-3 border border-[rgba(0,0,0,0.06)] shadow-[0_10px_30px_rgba(0,0,0,0.08),0_2px_10px_rgba(0,0,0,0.04)]"
+              className="flex items-center rounded-full bg-white/95 px-4 lg:px-8 py-2.5 lg:py-3 border border-[rgba(0,0,0,0.06)] shadow-[0_10px_30px_rgba(0,0,0,0.08),0_2px_10px_rgba(0,0,0,0.04)]"
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.15, ease: 'easeOut' }}
             >
-              <ul className="flex font-700 font-satoshi text-[16px] items-center gap-6 lg:gap-10">
+              <ul className="flex font-700 font-satoshi items-center gap-4 lg:gap-8">
                 {navItems.map((item, index) => (
                   <motion.li
                     key={item.id || item.path}
@@ -55,7 +55,7 @@ const Header = ({
                     <Link
                       to={item.path}
                       onClick={() => setIsMobileMenuOpen(false)}
-                      className="text-[20px] lg:text-sm font-700 font-satoshi tracking-tight-xs text-slate-900 transition-all duration-300 hover:text-slate-950 focus:outline-none whitespace-nowrap"
+                      className="text-sm font-700 font-satoshi tracking-tight-xs text-slate-900 transition-all duration-300 hover:text-slate-950 focus:outline-none whitespace-nowrap"
                     >
                       {item.label}
                     </Link>
@@ -82,7 +82,7 @@ const Header = ({
             <button
               type="button"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="lg:hidden inline-flex h-11 w-11 items-center justify-center rounded-full border border-slate-200 bg-white/90 text-slate-700 shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg"
+              className="md:hidden inline-flex h-11 w-11 items-center justify-center rounded-full border border-slate-200 bg-white/90 text-slate-700 shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg"
               aria-label="Toggle menu"
             >
               {isMobileMenuOpen ? <X size={20} /> : <Menu size={20} />}
@@ -97,7 +97,7 @@ const Header = ({
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -10 }}
               transition={{ duration: 0.3, ease: 'easeOut' }}
-              className="lg:hidden mt-3 rounded-[32px] border border-[rgba(15,17,21,0.08)] bg-white/95 px-4 py-5 shadow-[0_18px_40px_rgba(15,17,21,0.12)] backdrop-blur-xl"
+              className="md:hidden mt-3 rounded-[32px] border border-[rgba(15,17,21,0.08)] bg-white/95 px-4 py-5 shadow-[0_18px_40px_rgba(15,17,21,0.12)] backdrop-blur-xl"
             >
               <div className="flex flex-col gap-4">
                 {navItems.map((item) => (

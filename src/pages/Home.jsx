@@ -235,7 +235,7 @@ const Home = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-4 gap-6 lg:gap-8">
           {[
             {
               icon: "🎓",
@@ -701,7 +701,7 @@ const Home = () => {
       {/* ══════════════════════════════════════════
           BOTTOM CTA
       ══════════════════════════════════════════ */}
-      <section id="contact" className="py-8 sm:py-10 px-4 sm:px-6 lg:px-8 w-[92%] sm:w-[85%] max-w-6xl mx-auto">
+      <section id="contact" className="py-8 sm:py-10 px-4 sm:px-6 lg:px-8 w-full max-w-6xl mx-auto">
         <div className="bg-gradient-to-br from-blue-500 to-blue-700 rounded-[2.5rem] p-8 sm:p-12 relative overflow-hidden shadow-[0_20px_45px_-10px_rgba(37,99,235,0.3)] flex flex-col lg:flex-row items-center justify-between gap-8">
           <div className="relative z-10 max-w-xl text-left">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold font-satoshi text-white mb-4 leading-tight">

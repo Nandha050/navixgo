@@ -188,12 +188,12 @@ const Home = () => {
             />
           </div>
 
-          {/* Primary phone */}
-          <div className="flex-shrink-0 relative z-10">
-            {/* Soft glow behind phone */}
+          {/* Primary image */}
+          <div className="relative z-10 w-full max-w-4xl mx-auto px-2 sm:px-4 lg:px-0">
+            {/* Soft glow behind image */}
             <div className="absolute inset-0 rounded-full blur-3xl opacity-30 pointer-events-none"
               style={{ background: 'radial-gradient(ellipse,rgba(37,99,235,.4),transparent)' }} />
-            <img src={screenshotDashboard} alt="NavixGo live tracking" width="900" height="500" className="relative z-10 opacity-100 rounded-3xl" />
+            <img src={screenshotDashboard} alt="NavixGo live tracking" className="relative z-10 w-full h-auto object-contain rounded-xl sm:rounded-2xl lg:rounded-3xl shadow-[0_20px_60px_-15px_rgba(0,0,0,0.1)] border border-slate-200/50" />
           </div>
 
           {/* Right chips */}
@@ -701,7 +701,7 @@ const Home = () => {
       {/* ══════════════════════════════════════════
           BOTTOM CTA
       ══════════════════════════════════════════ */}
-      <section id="contact" className="py-8 sm:py-10 px-4 sm:px-6 lg:px-8 max-w-[85%] mx-auto">
+      <section id="contact" className="py-8 sm:py-10 px-4 sm:px-6 lg:px-8 w-[92%] sm:w-[85%] max-w-6xl mx-auto">
         <div className="bg-gradient-to-br from-blue-500 to-blue-700 rounded-[2.5rem] p-8 sm:p-12 relative overflow-hidden shadow-[0_20px_45px_-10px_rgba(37,99,235,0.3)] flex flex-col lg:flex-row items-center justify-between gap-8">
           <div className="relative z-10 max-w-xl text-left">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold font-satoshi text-white mb-4 leading-tight">

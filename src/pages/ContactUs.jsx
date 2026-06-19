@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Mail, Phone, MapPin, Clock, HelpCircle, Send, CheckCircle2 } from 'lucide-react';
 
-const ContactUs = ({ setCurrentPage }) => {
+const ContactUs = () => {
   const [formData, setFormData] = useState({
     fullName: '',
     email: '',
@@ -12,21 +12,68 @@ const ContactUs = ({ setCurrentPage }) => {
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+
     setIsSubmitting(true);
-    // Simulate API call
-    setTimeout(() => {
-      setIsSubmitting(false);
+
+    try {
+      const payload = {
+        data: {
+          fullName: formData.fullName,
+          email: formData.email,
+          organization: formData.organization,
+          subject: formData.subject,
+          message: formData.message,
+          submittedAt: new Date().toISOString(),
+          source: "NavixGo Website",
+          status: "New",
+        },
+      };
+
+      const response = await fetch(
+        "https://sheetdb.io/api/v1/yztgq2hdx7y9m",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(payload),
+        }
+      );
+
+      if (!response.ok) {
+        throw new Error("Failed to submit form");
+      }
+
+      const result = await response.json();
+
+      console.log("Form Submitted:", result);
+
       setIsSubmitted(true);
+
       setFormData({
-        fullName: '',
-        email: '',
-        organization: '',
-        subject: '',
-        message: '',
+        fullName: "",
+        email: "",
+        organization: "",
+        subject: "",
+        message: "",
       });
-    }, 1200);
+
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+
+    } catch (error) {
+      console.error("Contact Form Error:", error);
+
+      alert(
+        "Something went wrong. Please try again later."
+      );
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (e) => {
@@ -59,11 +106,11 @@ const ContactUs = ({ setCurrentPage }) => {
           </div>
 
           <div className="relative z-10 text-left">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-orange-500/10 text-orange-400 text-xs sm:text-sm font-bold mb-4 border border-orange-500/20">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-orange-500/10 text-orange-400 text-xs sm:text-sm  mb-4 border border-orange-500/20">
               <HelpCircle size={16} />
               <span>We're Here For You</span>
             </div>
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold mb-4 tracking-tight leading-tight">
+            <h1 className="text-3xl text-white sm:text-4xl lg:text-5xl font-700 font-satoshi mb-4 tracking-tight leading-tight">
               Contact Us
             </h1>
             <p className="text-slate-400 text-sm sm:text-base md:text-lg max-w-2xl font-medium leading-relaxed">
@@ -74,16 +121,16 @@ const ContactUs = ({ setCurrentPage }) => {
 
         {/* Two-Column Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-          
+
           {/* Left Column: Info & Details */}
           <div className="lg:col-span-5 space-y-6 text-left">
-            
+
             {/* Contact Info Card */}
             <div className="bg-white rounded-[2rem] p-6 sm:p-8 border border-slate-100 shadow-[0_15px_35px_-15px_rgba(0,0,0,0.05)]">
-              <h2 className="text-xl sm:text-2xl font-bold text-slate-900 mb-6">
+              <h2 className="text-xl sm:text-2xl font-600 font-satoshi text-slate-900 mb-6">
                 Contact Information
               </h2>
-              
+
               <div className="space-y-6">
                 {/* Email */}
                 <div className="flex items-start gap-4">
@@ -92,7 +139,7 @@ const ContactUs = ({ setCurrentPage }) => {
                   </div>
                   <div>
                     <p className="text-xs uppercase font-extrabold text-slate-400 tracking-wider">Email</p>
-                    <a href="mailto:navixgosupport@gmail.com" className="text-slate-700 hover:text-[#ea580c] font-bold text-sm sm:text-base mt-0.5 block transition-colors">
+                    <a href="mailto:navixgosupport@gmail.com" className="text-slate-700 hover:text-[#ea580c]  text-sm sm:text-base mt-0.5 block transition-colors">
                       navixgosupport@gmail.com
                     </a>
                   </div>
@@ -105,7 +152,7 @@ const ContactUs = ({ setCurrentPage }) => {
                   </div>
                   <div>
                     <p className="text-xs uppercase font-extrabold text-slate-400 tracking-wider">Phone</p>
-                    <p className="text-slate-700 font-bold text-sm sm:text-base mt-0.5">
+                    <p className="text-slate-700  text-sm sm:text-base mt-0.5">
                       +91 9949445524, 9381837737
                     </p>
                   </div>
@@ -118,7 +165,7 @@ const ContactUs = ({ setCurrentPage }) => {
                   </div>
                   <div>
                     <p className="text-xs uppercase font-extrabold text-slate-400 tracking-wider">Location</p>
-                    <p className="text-slate-700 font-bold text-sm sm:text-base mt-0.5 leading-relaxed">
+                    <p className="text-slate-700  text-sm sm:text-base mt-0.5 leading-relaxed">
                       Sangareddy, Telangana, 502001
                     </p>
                   </div>
@@ -132,8 +179,8 @@ const ContactUs = ({ setCurrentPage }) => {
                 <Clock size={22} />
               </div>
               <div>
-                <h3 className="text-lg font-bold text-slate-900 mb-1">Support Hours</h3>
-                <p className="text-slate-600 font-bold text-sm sm:text-base">
+                <h3 className="text-lg font-600 font-satoshi text-slate-900 mb-1">Support Hours</h3>
+                <p className="text-slate-600  text-sm sm:text-base">
                   Monday – Saturday
                 </p>
                 <p className="text-[#7c3aed] font-extrabold text-xs sm:text-sm mt-0.5 uppercase tracking-wider">
@@ -144,18 +191,18 @@ const ContactUs = ({ setCurrentPage }) => {
 
             {/* Why Contact Us Accordion/List */}
             <div className="bg-white rounded-[2rem] p-6 sm:p-8 border border-slate-100 shadow-[0_15px_35px_-15px_rgba(0,0,0,0.05)]">
-              <h2 className="text-xl sm:text-2xl font-bold text-slate-900 mb-6">
+              <h2 className="text-xl sm:text-2xl font-600 font-satoshi text-slate-900 mb-6">
                 Why Contact NavixGo?
               </h2>
               <ul className="space-y-4">
                 {whyContactReasons.map((item, idx) => (
                   <li key={idx} className="flex gap-3">
-                    <span className="w-5 h-5 rounded-full bg-blue-50 text-blue-600 font-bold text-xs flex items-center justify-center shrink-0 mt-0.5 select-none">
+                    <span className="w-5 h-5 rounded-full bg-blue-50 text-blue-600  text-xs flex items-center justify-center shrink-0 mt-0.5 select-none">
                       {idx + 1}
                     </span>
                     <div>
-                      <h4 className="text-slate-800 font-bold text-sm">{item.title}</h4>
-                      <p className="text-slate-400 text-xs font-semibold mt-0.5">{item.desc}</p>
+                      <h4 className="text-slate-800 font-600 font-satoshi text-sm">{item.title}</h4>
+                      <p className="text-slate-400 text-xs font-600 mt-0.5">{item.desc}</p>
                     </div>
                   </li>
                 ))}
@@ -165,8 +212,8 @@ const ContactUs = ({ setCurrentPage }) => {
             {/* Follow Us Card */}
             <div className="bg-[#eff6ff] rounded-[2rem] p-6 border border-blue-100 shadow-sm flex flex-col sm:flex-row justify-between items-center gap-4">
               <div>
-                <h3 className="font-extrabold text-slate-900 text-lg">Follow Us</h3>
-                <p className="text-slate-500 text-xs font-semibold mt-1">Stay updated with our latest releases.</p>
+                <h3 className="font-700 font-satoshi text-slate-900 text-lg">Follow Us</h3>
+                <p className="text-slate-500 text-xs font-600 mt-1">Stay updated with our latest releases.</p>
               </div>
               <div className="flex gap-2">
                 <a
@@ -215,40 +262,49 @@ const ContactUs = ({ setCurrentPage }) => {
           {/* Right Column: Form */}
           <div className="lg:col-span-7 text-left">
             <div className="bg-white rounded-[2rem] sm:rounded-[2.5rem] p-6 sm:p-10 border border-slate-100 shadow-[0_15px_45px_-15px_rgba(0,0,0,0.06)] relative overflow-hidden">
-              
+
               {/* Form title */}
               <div className="mb-8">
-                <h2 className="text-xl sm:text-3xl font-extrabold text-slate-900">
+                <h2 className="text-xl sm:text-3xl font-700 font-satoshi text-slate-900">
                   Send Us a Message
                 </h2>
-                <p className="text-slate-400 font-semibold text-sm mt-1">
+                <p className="text-slate-400 font-600 text-sm mt-1">
                   Fill out the contact form with your details and our team will get back to you as soon as possible.
                 </p>
               </div>
 
               {isSubmitted ? (
                 /* Success State with beautiful animations */
-                <div className="py-12 px-4 text-center space-y-6 animate-fade-in">
-                  <div className="w-20 h-20 bg-green-50 text-green-500 rounded-full flex items-center justify-center mx-auto border-2 border-green-200 shadow-md">
-                    <CheckCircle2 size={40} className="animate-bounce" />
+                <div className="py-16 text-center">
+                  <div className="mx-auto w-24 h-24 rounded-full bg-green-50 border border-green-200 flex items-center justify-center mb-6">
+                    <CheckCircle2
+                      size={48}
+                      className="text-green-600"
+                    />
                   </div>
-                  <div>
-                    <h3 className="text-2xl font-extrabold text-slate-900">Message Sent!</h3>
-                    <p className="text-slate-500 text-sm font-semibold mt-2 leading-relaxed max-w-sm mx-auto">
-                      Thank you for contacting NavixGo. Our onboarding and support specialists will review your message and reach out to you within 24 hours.
-                    </p>
+
+                  <h3 className="text-3xl font-700 font-satoshi text-slate-900 mb-3">
+                    Message Received
+                  </h3>
+
+                  <p className="text-slate-500 max-w-md mx-auto leading-relaxed">
+                    Thank you for contacting NavixGo.
+                    <br />
+                    Our team has successfully received your enquiry and will reach out to you shortly.
+                  </p>
+
+                  <div className="mt-6 inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-50 border border-blue-100">
+                    <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
+
+                    <span className="text-sm font-semibold text-slate-700">
+                      Expected response time: Within 24 Hours
+                    </span>
                   </div>
-                  <button
-                    onClick={() => setIsSubmitted(false)}
-                    className="inline-flex items-center gap-2 bg-[#0b101e] text-white hover:bg-black font-extrabold px-6 py-3 rounded-full text-sm shadow-md transition-all transform hover:scale-105 active:scale-95"
-                  >
-                    Send Another Message
-                  </button>
                 </div>
               ) : (
                 /* Form State */
                 <form onSubmit={handleSubmit} className="space-y-6">
-                  
+
                   {/* Name & Email Group */}
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                     <div>

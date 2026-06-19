@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { Routes, Route, useLocation } from 'react-router-dom';
 import Header from './components/layout/Header';
 import Footer from './components/layout/Footer';
 import Home from './pages/Home';
@@ -8,51 +9,48 @@ import ContactUs from './pages/ContactUs';
 import TermsOfService from './pages/TermsOfService';
 import AboutUs from './pages/AboutUs';
 
-const App = () => {
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [currentPage, setCurrentPage] = useState('home'); // 'home', 'plans', 'privacy-policy', 'contact-us', 'terms-of-service', 'about-us'
+const ScrollToHash = () => {
+  const { pathname, hash } = useLocation();
 
-  // Scroll to top when page changes
   useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [currentPage]);
-
-  const handleNavClick = (id) => {
-    if (currentPage !== 'home') {
-      setCurrentPage('home');
+    if (hash) {
       setTimeout(() => {
-        document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+        const element = document.getElementById(hash.replace('#', ''));
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
       }, 100);
     } else {
-      document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+      window.scrollTo(0, 0);
     }
-    setIsMobileMenuOpen(false);
-  };
+  }, [pathname, hash]);
+
+  return null;
+};
+
+const App = () => {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   return (
-    <div className="min-h-screen bg-slate-50 font-sans text-slate-900 selection:bg-[#ea580c] selection:text-white flex flex-col w-full overflow-x-hidden">
+    <div className="min-h-screen bg-[#FAFAFA] font-inter text-slate-950 selection:bg-[#ea580c] selection:text-white flex flex-col w-full overflow-x-hidden">
+      <ScrollToHash />
       <Header
-        currentPage={currentPage}
-        setCurrentPage={setCurrentPage}
-        handleNavClick={handleNavClick}
         isMobileMenuOpen={isMobileMenuOpen}
         setIsMobileMenuOpen={setIsMobileMenuOpen}
       />
 
-      <main className="flex-1 w-full overflow-x-hidden flex flex-col justify-start items-center">
-        {currentPage === 'home' && <Home setCurrentPage={setCurrentPage} />}
-        {currentPage === 'plans' && <Plans setCurrentPage={setCurrentPage} />}
-        {currentPage === 'privacy-policy' && <PrivacyPolicy setCurrentPage={setCurrentPage} />}
-        {currentPage === 'contact-us' && <ContactUs setCurrentPage={setCurrentPage} />}
-        {currentPage === 'terms-of-service' && <TermsOfService setCurrentPage={setCurrentPage} />}
-        {currentPage === 'about-us' && <AboutUs setCurrentPage={setCurrentPage} />}
+      <main className="pt-28 flex-1 w-full overflow-x-hidden flex flex-col justify-start items-center">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/plans" element={<Plans />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="/contact-us" element={<ContactUs />} />
+          <Route path="/terms-of-service" element={<TermsOfService />} />
+          <Route path="/about-us" element={<AboutUs />} />
+        </Routes>
       </main>
 
-      <Footer 
-        currentPage={currentPage}
-        setCurrentPage={setCurrentPage} 
-        handleNavClick={handleNavClick} 
-      />
+      <Footer />
     </div>
   );
 };

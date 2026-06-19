@@ -1,6 +1,6 @@
 import { Scale, Info, Layers, UserCheck, ShieldAlert, BadgeInfo, AlertOctagon, HelpCircle, Eye, Hammer, Clock, Mail } from 'lucide-react';
 
-const TermsOfService = ({ setCurrentPage }) => {
+const TermsOfService = () => {
   return (
     <div className="w-full bg-slate-50 min-h-screen py-16 px-4 sm:px-6 lg:px-8 select-none">
       <div className="max-w-5xl mx-auto w-full">
@@ -15,11 +15,11 @@ const TermsOfService = ({ setCurrentPage }) => {
           </div>
 
           <div className="relative z-10 text-left">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-500/10 text-blue-400 text-xs sm:text-sm font-bold mb-4 border border-blue-500/20">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-500/10 text-blue-400 text-xs sm:text-sm  mb-4 border border-blue-500/20">
               <Scale size={16} />
               <span>Legal Guidelines</span>
             </div>
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold mb-4 tracking-tight leading-tight">
+            <h1 className="text-3xl text-white sm:text-4xl lg:text-5xl font-700 font-satoshi mb-4 tracking-tight leading-tight\">
               Terms of Service
             </h1>
             <div className="flex items-center gap-2 text-slate-400 text-sm font-medium">
@@ -31,7 +31,7 @@ const TermsOfService = ({ setCurrentPage }) => {
 
         {/* Terms Content */}
         <div className="bg-white rounded-[2rem] sm:rounded-[2.5rem] p-6 sm:p-10 border border-slate-100 shadow-[0_15px_35px_-15px_rgba(0,0,0,0.05)] text-left space-y-12">
-          
+
           <div className="prose max-w-none">
             <p className="text-slate-600 text-base sm:text-lg leading-relaxed font-medium">
               Welcome to NavixGo. These Terms of Service govern your access to and use of the NavixGo platform, website, mobile application, and related smart transit telemetry services.
@@ -45,12 +45,12 @@ const TermsOfService = ({ setCurrentPage }) => {
 
           {/* Section 1: Services Provided */}
           <div className="space-y-4">
-            <h2 className="text-xl sm:text-2xl font-bold text-slate-900 flex items-center gap-3">
+            <h2 className="text-xl sm:text-2xl font-600 font-satoshi text-slate-900 flex items-center gap-3">
               <span className="p-2 rounded-xl bg-blue-50 text-[#0056b3]"><Layers size={20} /></span>
               <span>Services Provided</span>
             </h2>
             <div className="bg-slate-50 p-6 rounded-2xl border border-slate-100">
-              <p className="text-slate-500 text-sm sm:text-base leading-relaxed font-semibold mb-4">
+              <p className="text-slate-500 text-sm sm:text-base leading-relaxed font-600 mb-4">
                 NavixGo provides transportation and fleet management solutions, including:
               </p>
               <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-slate-600 font-semibold text-sm">
@@ -65,7 +65,7 @@ const TermsOfService = ({ setCurrentPage }) => {
 
           {/* Section 2: User Responsibilities */}
           <div className="space-y-4">
-            <h2 className="text-xl sm:text-2xl font-bold text-slate-900 flex items-center gap-3">
+            <h2 className="text-xl sm:text-2xl font-600 font-satoshi text-slate-900 flex items-center gap-3">
               <span className="p-2 rounded-xl bg-green-50 text-green-600"><UserCheck size={20} /></span>
               <span>User Responsibilities</span>
             </h2>
@@ -79,7 +79,7 @@ const TermsOfService = ({ setCurrentPage }) => {
                 <li>Use the platform solely for lawful, authorized transportation management purposes.</li>
                 <li>Avoid misuse, unauthorized access, or disruption of platform operations and APIs.</li>
               </ul>
-              <p className="text-slate-400 text-xs sm:text-sm font-bold bg-amber-50 text-amber-800 p-3 rounded-lg border border-amber-100">
+              <p className="text-slate-400 text-xs sm:text-sm  bg-amber-50 text-amber-800 p-3 rounded-lg border border-amber-100">
                 ⚠️ Notice: Users are solely responsible for all activities and transactions performed through their accounts.
               </p>
             </div>
@@ -87,7 +87,7 @@ const TermsOfService = ({ setCurrentPage }) => {
 
           {/* Section 3: Subscription & Payments */}
           <div className="space-y-4">
-            <h2 className="text-xl sm:text-2xl font-bold text-slate-900 flex items-center gap-3">
+            <h2 className="text-xl sm:text-2xl font-600 font-satoshi text-slate-900 flex items-center gap-3">
               <span className="p-2 rounded-xl bg-orange-50 text-[#ea580c]"><Info size={20} /></span>
               <span>Subscription & Payments</span>
             </h2>
@@ -106,7 +106,7 @@ const TermsOfService = ({ setCurrentPage }) => {
 
           {/* Section 4: Service Availability */}
           <div className="space-y-4">
-            <h2 className="text-xl sm:text-2xl font-bold text-slate-900 flex items-center gap-3">
+            <h2 className="text-xl sm:text-2xl font-600 font-satoshi text-slate-900 flex items-center gap-3">
               <span className="p-2 rounded-xl bg-purple-50 text-[#7c3aed]"><Hammer size={20} /></span>
               <span>Service Availability</span>
             </h2>
@@ -117,7 +117,7 @@ const TermsOfService = ({ setCurrentPage }) => {
 
           {/* Section 5: Data & Privacy */}
           <div className="space-y-4">
-            <h2 className="text-xl sm:text-2xl font-bold text-slate-900 flex items-center gap-3">
+            <h2 className="text-xl sm:text-2xl font-600 font-satoshi text-slate-900 flex items-center gap-3">
               <span className="p-2 rounded-xl bg-teal-50 text-teal-600"><Eye size={20} /></span>
               <span>Data & Privacy</span>
             </h2>
@@ -128,7 +128,7 @@ const TermsOfService = ({ setCurrentPage }) => {
 
           {/* Section 6: Prohibited Activities */}
           <div className="space-y-4">
-            <h2 className="text-xl sm:text-2xl font-bold text-slate-900 flex items-center gap-3">
+            <h2 className="text-xl sm:text-2xl font-600 font-satoshi text-slate-900 flex items-center gap-3">
               <span className="p-2 rounded-xl bg-red-50 text-red-500"><AlertOctagon size={20} /></span>
               <span>Prohibited Activities</span>
             </h2>
@@ -145,7 +145,7 @@ const TermsOfService = ({ setCurrentPage }) => {
 
           {/* Section 7: Intellectual Property */}
           <div className="space-y-4">
-            <h2 className="text-xl sm:text-2xl font-bold text-slate-900 flex items-center gap-3">
+            <h2 className="text-xl sm:text-2xl font-600 font-satoshi text-slate-900 flex items-center gap-3">
               <span className="p-2 rounded-xl bg-cyan-50 text-cyan-600"><BadgeInfo size={20} /></span>
               <span>Intellectual Property</span>
             </h2>
@@ -156,7 +156,7 @@ const TermsOfService = ({ setCurrentPage }) => {
 
           {/* Section 8: Limitation of Liability */}
           <div className="space-y-4">
-            <h2 className="text-xl sm:text-2xl font-bold text-slate-900 flex items-center gap-3">
+            <h2 className="text-xl sm:text-2xl font-600 font-satoshi text-slate-900 flex items-center gap-3">
               <span className="p-2 rounded-xl bg-orange-100 text-orange-700"><ShieldAlert size={20} /></span>
               <span>Limitation of Liability</span>
             </h2>
@@ -172,19 +172,19 @@ const TermsOfService = ({ setCurrentPage }) => {
 
           {/* Section 9: Termination */}
           <div className="space-y-4">
-            <h2 className="text-xl sm:text-2xl font-bold text-slate-900 flex items-center gap-3">
+            <h2 className="text-xl sm:text-2xl font-600 font-satoshi text-slate-900 flex items-center gap-3">
               <span className="p-2 rounded-xl bg-slate-100 text-slate-700"><HelpCircle size={20} /></span>
               <span>Termination & Policy Changes</span>
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
               <div>
-                <h4 className="font-bold text-slate-900 mb-2">Account Termination</h4>
+                <h4 className="font-600 font-satoshi text-slate-900 mb-2">Account Termination</h4>
                 <p className="text-slate-500 text-sm font-semibold leading-relaxed">
                   NavixGo reserves the right to suspend or terminate customer accounts or driver credentials that violate these legal guidelines or misuse tracking channels.
                 </p>
               </div>
               <div>
-                <h4 className="font-bold text-slate-900 mb-2">Changes to Terms</h4>
+                <h4 className="font-600 font-satoshi text-slate-900 mb-2">Changes to Terms</h4>
                 <p className="text-slate-500 text-sm font-semibold leading-relaxed">
                   We may periodically revise these Terms. Continued use of the platform and companion driver applications constitutes explicit consent to the updated clauses.
                 </p>
@@ -195,12 +195,12 @@ const TermsOfService = ({ setCurrentPage }) => {
           {/* Legal Contact Section */}
           <div className="bg-[#eff6ff] rounded-2xl p-6 sm:p-8 flex flex-col sm:flex-row justify-between items-center gap-4">
             <div className="text-left">
-              <h3 className="font-bold text-slate-900 text-lg">Legal Queries?</h3>
+              <h3 className="font-600 font-satoshi text-slate-900 text-lg">Legal Queries?</h3>
               <p className="text-slate-500 text-sm font-semibold mt-1">Contact our legal compliance office for questions.</p>
             </div>
             <a
               href="mailto:navixgosupport@gmail.com"
-              className="inline-flex items-center gap-2 bg-[#0056b3] text-white px-5 py-3 rounded-full font-bold hover:bg-[#004494] transition-all transform hover:scale-105 active:scale-95 text-sm"
+              className="inline-flex items-center gap-2 bg-[#0056b3] text-white px-5 py-3 rounded-full  hover:bg-[#004494] transition-all transform hover:scale-105 active:scale-95 text-sm"
             >
               <Mail size={16} />
               <span>navixgosupport@gmail.com</span>
@@ -215,3 +215,5 @@ const TermsOfService = ({ setCurrentPage }) => {
 };
 
 export default TermsOfService;
+
+

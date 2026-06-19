@@ -1,74 +1,76 @@
 import React from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 import Logo from '../common/Logo';
 
-const Footer = ({ setCurrentPage, handleNavClick, controlRoomUnlocked }) => {
+const Footer = ({ controlRoomUnlocked }) => {
+  const navigate = useNavigate();
   return (
     <footer className="bg-[#050505] pt-20 pb-10 border-t border-slate-900 mt-auto select-none">
       <div className="max-w-[94%] 2xl:max-w-[96%] 3xl:max-w-[98%] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
           <div className="lg:col-span-1">
             <div className="mb-6">
-              <Logo onClick={() => setCurrentPage('home')} dark={true} />
+              <Logo onClick={() => navigate('/')} dark={true} />
             </div>
-            <p className="text-slate-400 text-sm 3xl:text-base leading-relaxed max-w-xs font-medium">
+            <p className="text-slate-400 text-sm 3xl:text-base leading-relaxed max-w-xs font-medium font-inter">
               Genuine tales from entrepreneurs who revolutionized their companies. Discover how they turned challenges into success.
             </p>
           </div>
           <div>
-            <h4 className="text-white font-bold mb-6 text-lg 3xl:text-xl">Quick Links</h4>
+            <h4 className="text-white font-600 font-satoshi mb-6 text-lg 3xl:text-xl">Quick Links</h4>
             <ul className="space-y-4">
               <li>
-                <button
-                  onClick={() => handleNavClick('features')}
-                  className="text-slate-400 hover:text-white transition-colors font-medium text-sm 3xl:text-base text-left"
+                <Link
+                  to="/#features"
+                  className="text-slate-400 hover:text-white transition-colors font-medium text-sm 3xl:text-base text-left block"
                 >
                   Features
-                </button>
+                </Link>
               </li>
               <li>
-                <button
-                  onClick={() => setCurrentPage('plans')}
-                  className="text-slate-400 hover:text-white transition-colors font-medium text-sm 3xl:text-base text-left"
+                <Link
+                  to="/plans"
+                  className="text-slate-400 hover:text-white transition-colors font-medium text-sm 3xl:text-base text-left block"
                 >
                   Plans & Services
-                </button>
+                </Link>
               </li>
               <li>
-                <button
-                  onClick={() => setCurrentPage('about-us')}
-                  className="text-slate-400 hover:text-white transition-colors font-medium text-sm 3xl:text-base text-left"
+                <Link
+                  to="/about-us"
+                  className="text-slate-400 hover:text-white transition-colors font-medium text-sm 3xl:text-base text-left block"
                 >
                   About Us
-                </button>
+                </Link>
               </li>
               <li>
-                <button
-                  onClick={() => setCurrentPage('contact-us')}
-                  className="text-slate-400 hover:text-white transition-colors font-medium text-sm 3xl:text-base text-left"
+                <Link
+                  to="/contact-us"
+                  className="text-slate-400 hover:text-white transition-colors font-medium text-sm 3xl:text-base text-left block"
                 >
                   Contact
-                </button>
+                </Link>
               </li>
               <li>
-                <button
-                  onClick={() => setCurrentPage('privacy-policy')}
-                  className="text-slate-400 hover:text-white transition-colors font-medium text-sm 3xl:text-base text-left"
+                <Link
+                  to="/privacy-policy"
+                  className="text-slate-400 hover:text-white transition-colors font-medium text-sm 3xl:text-base text-left block"
                 >
                   Privacy Policy
-                </button>
+                </Link>
               </li>
               <li>
-                <button
-                  onClick={() => setCurrentPage('terms-of-service')}
-                  className="text-slate-400 hover:text-white transition-colors font-medium text-sm 3xl:text-base text-left"
+                <Link
+                  to="/terms-of-service"
+                  className="text-slate-400 hover:text-white transition-colors font-medium text-sm 3xl:text-base text-left block"
                 >
                   Terms of Service
-                </button>
+                </Link>
               </li>
             </ul>
           </div>
           <div>
-            <h4 className="text-white font-bold mb-6 text-lg 3xl:text-xl">Contact</h4>
+            <h4 className="text-white font-600 font-satoshi mb-6 text-lg 3xl:text-xl">Contact</h4>
             <ul className="space-y-4">
               <li className="flex items-center gap-3">
                 <div className="text-slate-400 bg-slate-800 p-1.5 rounded-full">
@@ -133,7 +135,7 @@ const Footer = ({ setCurrentPage, handleNavClick, controlRoomUnlocked }) => {
             </ul>
           </div>
           <div>
-            <h4 className="text-white font-bold mb-6 text-lg 3xl:text-xl">Follow Us</h4>
+            <h4 className="text-white font-600 font-satoshi mb-6 text-lg 3xl:text-xl">Follow Us</h4>
             <div className="flex gap-3">
               <a
                 href="#"
@@ -174,20 +176,20 @@ const Footer = ({ setCurrentPage, handleNavClick, controlRoomUnlocked }) => {
           </div>
         </div>
         <div className="border-t border-slate-900 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-slate-500 text-sm 3xl:text-base font-medium">© 2026 NavixGo LLC. All rights reserved.</p>
+          <p className="text-slate-500 text-sm 3xl:text-base font-medium font-inter">© 2026 NavixGo Mobility Pvt Ltd. All rights reserved.</p>
           <div className="flex gap-6">
-            <button
-              onClick={() => setCurrentPage('privacy-policy')}
+            <Link
+              to="/privacy-policy"
               className="text-slate-500 hover:text-white text-sm 3xl:text-base font-medium transition-colors"
             >
               Privacy Policy
-            </button>
-            <button
-              onClick={() => setCurrentPage('terms-of-service')}
+            </Link>
+            <Link
+              to="/terms-of-service"
               className="text-slate-500 hover:text-white text-sm 3xl:text-base font-medium transition-colors"
             >
               Terms of Service
-            </button>
+            </Link>
           </div>
         </div>
       </div>

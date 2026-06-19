@@ -1,237 +1,364 @@
+import React from 'react';
 import { Check, Minus, School, Smartphone, Bus } from 'lucide-react';
 
-const Plans = ({ setCurrentPage }) => {
+const Plans = () => {
   const plansData = [
     {
-      name: 'Free Trial',
+      name: 'Freemium',
       price: 'Free',
-      period: 'for 3 Buses upto 3 Days',
-      desc: 'Experience all premium features completely free.',
-      color: 'bg-slate-100',
+      period: '3 Buses • 3 Days',
+      desc: 'Allow institutions to evaluate the platform.',
+      color: 'bg-slate-50',
+      border: 'border border-slate-200',
       text: 'text-slate-900',
-      btn: 'bg-white text-slate-900 border-2 border-slate-200 hover:border-slate-400 hover:bg-slate-50',
+      btn: 'bg-white text-slate-900 border-2 border-slate-200 hover:border-slate-400 hover:bg-slate-100',
+      btnText: 'Start Freemium',
       features: [
-        'Real-time bus tracking',
-        'Driver GPS tracking',
-        'Student notifications',
-        'ETA updates',
-        'Route & stop management',
-        'Admin dashboard',
-        'Live location updates',
+        'Real-Time Bus Tracking',
+        'Driver GPS Tracking',
+        'Student Notifications',
+        'ETA Updates',
+        'Route Management',
+        'Driver Management',
+        'Admin Dashboard',
+        'Live Location Updates',
       ],
     },
     {
       name: 'Monthly',
       price: '₹300',
-      period: 'per Bus / Month',
-      desc: 'All Free Trial Features Plus:',
-      color: 'bg-[#f8fafc]',
+      period: 'Per Bus / Month',
+      desc: 'Everything you need to manage and track your transportation operations.',
+      color: 'bg-white',
       border: 'border border-slate-200',
       text: 'text-slate-900',
-      btn: 'bg-white text-slate-900 border-2 border-slate-200 hover:border-slate-400 hover:bg-slate-50',
+      btn: 'bg-slate-900 text-white hover:bg-slate-800 shadow-md hover:shadow-lg',
+      btnText: 'Choose Monthly',
       features: [
-        'Unlimited live tracking',
-        'Current & next stop visibility',
-        'Real-time ETA',
-        'Bus arrival alerts',
-        'Delay notifications',
-        'Driver & route management',
+        'Real-Time Bus Tracking',
+        'Driver GPS Tracking',
+        'Student Notifications',
+        'ETA Updates',
+        'Route Management',
+        'Driver Management',
+        'Admin Dashboard',
+        'Live Location Updates',
+        'Email Support',
+        'Standard Response Time',
       ],
     },
     {
       name: 'Quarterly',
       price: '₹750',
-      period: 'per Bus / 3 Months',
-      desc: 'All Monthly Features Plus:',
-      color: 'bg-[#f8fafc]',
+      originalPrice: '₹900',
+      badge: 'Save ₹150 • 17% OFF',
+      badgeColor: 'bg-emerald-100 text-emerald-800 border border-emerald-200',
+      period: 'Per Bus / Quarter',
+      desc: 'Ideal for institutions seeking ongoing support and better operational continuity.',
+      color: 'bg-white',
       border: 'border border-slate-200',
       text: 'text-slate-900',
-      btn: 'bg-white text-slate-900 border-2 border-slate-200 hover:border-slate-400 hover:bg-slate-50',
+      btn: 'bg-slate-900 text-white hover:bg-slate-800 shadow-md hover:shadow-lg',
+      btnText: 'Choose Quarterly',
       features: [
-        'Faster live location refresh',
-        'Personalized student notifications',
-        'Live route visibility',
-        'Trip history access',
-        'Priority support',
+        'Everything in Monthly',
+        'Priority Email Support',
+        'Faster Issue Resolution',
+        'Onboarding Guidance',
+        'Route Setup Assistance',
+        'Best Practice Recommendations',
       ],
     },
     {
       name: 'Half-Yearly',
       price: '₹1500',
-      period: 'per Bus / 6 Months',
-      desc: 'All Quarterly Features Plus:',
+      originalPrice: '₹1800',
+      badge: 'Most Popular',
+      badgeColor: 'bg-orange-100 text-orange-800 border border-orange-200',
+      secondaryBadge: 'Save ₹300',
+      secondaryBadgeColor: 'bg-orange-50 text-orange-600',
+      period: 'Per Bus / 6 Months',
+      desc: 'Best for institutions preparing for a full academic semester.',
       recommended: true,
       color: 'bg-[#fff7ed]',
-      border: 'border-2 border-[#f97316]',
+      border: 'border-2 border-[#ea580c]',
       text: 'text-slate-900',
-      btn: 'bg-[#ea580c] text-white hover:bg-[#c24100] hover:shadow-lg shadow-orange-500/20',
+      btn: 'bg-[#ea580c] text-white hover:bg-[#c24100] shadow-md hover:shadow-xl shadow-orange-500/20',
+      btnText: 'Choose Half-Yearly',
+      scale: 'lg:scale-105 z-10',
       features: [
-        'Advanced admin dashboard',
-        'Live fleet monitoring',
-        'Driver activity tracking',
-        'Route performance monitoring',
-        'Improved ETA accuracy',
+        'Everything in Quarterly',
+        'Dedicated Onboarding Assistance',
+        'Fleet Setup Support',
+        'Route Configuration Help',
+        'Student Notification Setup Assistance',
+        'Priority Support Queue',
       ],
     },
     {
       name: 'Annual',
       price: '₹2500',
-      period: 'per Bus / 12 Months',
-      desc: 'All Half-Yearly Features Plus:',
-      color: 'bg-[#0b101e]',
+      originalPrice: '₹3600',
+      badge: 'Best Value',
+      badgeColor: 'bg-blue-100 text-blue-800 border border-blue-200',
+      secondaryBadge: 'Save ₹1100 • 31% OFF',
+      secondaryBadgeColor: 'bg-blue-950 text-blue-300',
+      period: 'Per Bus / Year',
+      desc: 'Complete institutional partnership with premium support and long-term benefits.',
+      color: 'bg-gradient-to-b from-[#0b101e] to-slate-900',
+      border: 'border border-slate-800',
       text: 'text-white',
-      btn: 'bg-white text-slate-900 hover:bg-slate-200 hover:shadow-lg',
+      btn: 'bg-white text-slate-900 hover:bg-slate-200 shadow-md hover:shadow-xl',
+      btnText: 'Choose Annual',
       features: [
-        'Lowest cost per month',
-        'Dedicated onboarding support',
-        'Institution branding support',
-        'Early access to upcoming features',
-        'Premium customer support',
+        'Everything in Half-Yearly',
+        'Dedicated Success Support',
+        'Institution Branding Support',
+        'Priority Feature Requests',
+        'Early Access to New Features',
+        'Premium Customer Support',
+        'Quarterly Platform Reviews',
       ],
     },
   ];
 
-  const featureTable = [
-    { name: 'Real-Time Bus Tracking', vals: [true, true, true, true, true] },
-    { name: 'Driver GPS Tracking', vals: [true, true, true, true, true] },
-    { name: 'Current Bus Location', vals: [true, true, true, true, true] },
-    { name: 'Next Stop Visibility', vals: [true, true, true, true, true] },
-    { name: 'ETA Updates', vals: [true, true, true, true, true] },
-    { name: 'Student Notifications', vals: [true, true, true, true, true] },
-    { name: 'Delay Alerts', vals: [true, true, true, true, true] },
-    { name: 'Route Management', vals: [true, true, true, true, true] },
-    { name: 'Driver Management', vals: [true, true, true, true, true] },
-    { name: 'Trip History', vals: [false, false, true, true, true] },
-    { name: 'Live Fleet Dashboard', vals: [false, false, false, true, true] },
-    { name: 'Priority Support', vals: [false, false, true, true, true] },
-    { name: 'Institution Branding', vals: [false, false, false, false, true] },
+  const featureCategories = [
+    {
+      category: 'TRACKING',
+      features: [
+        { name: 'Real-Time Bus Tracking', vals: [true, true, true, true, true] },
+        { name: 'Driver GPS Tracking', vals: [true, true, true, true, true] },
+        { name: 'Current Bus Location', vals: [true, true, true, true, true] },
+        { name: 'ETA Updates', vals: [true, true, true, true, true] },
+        { name: 'Next Stop Visibility', vals: [true, true, true, true, true] },
+      ]
+    },
+    {
+      category: 'STUDENT EXPERIENCE',
+      features: [
+        { name: 'Student Notifications', vals: [true, true, true, true, true] },
+        { name: 'Delay Alerts', vals: [true, true, true, true, true] },
+        { name: 'Arrival Notifications', vals: [true, true, true, true, true] },
+      ]
+    },
+    {
+      category: 'MANAGEMENT',
+      features: [
+        { name: 'Route Management', vals: [true, true, true, true, true] },
+        { name: 'Driver Management', vals: [true, true, true, true, true] },
+        { name: 'Admin Dashboard', vals: [true, true, true, true, true] },
+      ]
+    },
+    {
+      category: 'SUPPORT',
+      features: [
+        { name: 'Standard Support', vals: [false, true, true, true, true] },
+        { name: 'Priority Support', vals: [false, false, true, true, true] },
+        { name: 'Dedicated Onboarding', vals: [false, false, false, true, true] },
+        { name: 'Premium Support', vals: [false, false, false, false, true] },
+        { name: 'Dedicated Success Assistance', vals: [false, false, false, false, true] },
+      ]
+    },
+    {
+      category: 'SERVICES',
+      features: [
+        { name: 'Route Setup Guidance', vals: [false, false, true, true, true] },
+        { name: 'Fleet Configuration Assistance', vals: [false, false, false, true, true] },
+        { name: 'Institution Branding', vals: [false, false, false, false, true] },
+        { name: 'Quarterly Success Reviews', vals: [false, false, false, false, true] },
+        { name: 'Priority Feature Requests', vals: [false, false, false, false, true] },
+      ]
+    }
   ];
 
   return (
     <div className="pt-12 pb-20 px-4 sm:px-6 lg:px-8 max-w-[94%] 2xl:max-w-[96%] 3xl:max-w-[98%] mx-auto w-full">
       <div className="text-center mb-16 select-none">
-        <h1 className="text-3xl sm:text-4xl md:text-6xl 3xl:text-7xl font-extrabold text-slate-900 tracking-tight mb-6">
+        <h1 className="text-3xl sm:text-4xl md:text-5xl 3xl:text-6xl font-700 font-satoshi text-slate-900 tracking-tight mb-4">
           NavixGo Membership Plans
         </h1>
-        <p className="text-base sm:text-lg md:text-xl 3xl:text-2xl text-slate-600 font-medium">
-          Pick your perfect plan and enjoy features the whole institution will love.
+        <p className="text-base sm:text-lg md:text-xl text-slate-500 font-medium max-w-2xl mx-auto leading-relaxed">
+          The core platform works great on every plan. Higher plans provide more support, services, and onboarding assistance for a smoother institutional rollout.
         </p>
       </div>
 
-      {/* Pricing Cards */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6 mb-24">
-        {plansData.map((plan, i) => (
+      {/* Free Trial Card */}
+      <div className="flex justify-center mb-16">
+        {(() => {
+          const plan = plansData[0]; // Freemium
+          return (
+            <div
+              className={`w-full max-w-[340px] xl:max-w-[360px] rounded-[2.5rem] p-8 flex flex-col shadow-sm hover:shadow-xl transition-all duration-300 ${plan.color} ${plan.border || ''} ${plan.text}`}
+            >
+              <div className="mb-6 text-center">
+                <h3 className={`text-2xl lg:text-3xl font-700 font-satoshi mb-2 ${plan.text}`}>{plan.name}</h3>
+                <div className="flex justify-center items-end gap-2 mb-1">
+                  <span className="text-5xl font-extrabold tracking-tight">{plan.price}</span>
+                </div>
+                <span className="text-sm font-600 opacity-80 block mb-4 tracking-wide uppercase">{plan.period}</span>
+                <p className="text-sm opacity-90 leading-relaxed font-medium min-h-[40px]">{plan.desc}</p>
+              </div>
+
+              <ul className="grid grid-cols-2 gap-x-4 gap-y-3 mb-8 flex-1 text-left border-t border-slate-200/20 pt-6">
+                {plan.features.map((f, j) => (
+                  <li key={j} className="flex items-start gap-2 text-sm">
+                    <Check className="w-4 h-4 shrink-0 mt-0.5 opacity-90 text-green-500" strokeWidth={3} />
+                    <span className="opacity-90 font-medium leading-snug">{f}</span>
+                  </li>
+                ))}
+              </ul>
+
+              <button
+                onClick={() => { window.location.href = 'https://navixgo.in/plans'; }}
+                className={`w-full py-3.5 rounded-xl transition-all active:scale-95 duration-200 select-none font-bold text-sm tracking-wide mt-auto ${plan.btn}`}
+              >
+                {plan.btnText}
+              </button>
+            </div>
+          );
+        })()}
+      </div>
+
+      {/* Paid Pricing Cards */}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 mb-24 items-stretch">
+        {plansData.slice(1).map((plan, i) => (
           <div
             key={i}
-            className={`rounded-[2rem] p-6 relative flex flex-col h-full shadow-sm hover:shadow-xl transition-all duration-300 ${
-              plan.color
-            } ${plan.border || ''} ${plan.text}`}
+            className={`w-full rounded-[2.5rem] p-8 relative flex flex-col h-full shadow-sm hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 ${plan.color} ${plan.border || ''} ${plan.text} ${plan.scale || ''}`}
           >
-            {plan.recommended && (
-              <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-[#f97316] text-white text-xs font-bold px-4 py-1.5 rounded-full whitespace-nowrap shadow-md flex items-center gap-1 select-none">
-                ⭐ Recommended
-              </div>
-            )}
-            <div className="mb-6 text-left">
-              <h3 className="text-xl font-bold mb-2">{plan.name}</h3>
-              <div className="flex items-baseline gap-1 mb-1">
-                <span className="text-3xl font-extrabold">{plan.price}</span>
-              </div>
-              <span className="text-xs font-semibold opacity-80 block mb-4">{plan.period}</span>
-              <p className="text-sm font-bold opacity-90 leading-snug">{plan.desc}</p>
+            {/* Top Badges */}
+            <div className="flex flex-col gap-2 mb-6 h-12">
+              {plan.badge && (
+                <div className={`inline-flex self-start text-xs font-bold font-satoshi px-3 py-1 rounded-full whitespace-nowrap shadow-sm select-none ${plan.badgeColor}`}>
+                  {plan.badge}
+                </div>
+              )}
+              {plan.secondaryBadge && (
+                <div className={`inline-flex self-start text-[11px] font-bold font-satoshi px-2 py-0.5 rounded-full whitespace-nowrap select-none ${plan.secondaryBadgeColor}`}>
+                  {plan.secondaryBadge}
+                </div>
+              )}
             </div>
-            <ul className="space-y-3 mb-8 flex-1 text-left">
+
+            <div className="mb-6 text-left">
+              <h3 className={`text-xl lg:text-2xl font-700 font-satoshi mb-2 ${plan.text}`}>{plan.name}</h3>
+              <div className="flex items-end gap-2 mb-1">
+                <span className="text-4xl font-extrabold tracking-tight">{plan.price}</span>
+                {plan.originalPrice && (
+                  <span className="text-lg line-through opacity-50 font-semibold pb-1">{plan.originalPrice}</span>
+                )}
+              </div>
+              <span className="text-xs font-600 opacity-80 block mb-4 tracking-wide uppercase">{plan.period}</span>
+              <p className="text-sm opacity-90 leading-relaxed font-medium min-h-[40px]">{plan.desc}</p>
+            </div>
+
+            <ul className="grid grid-cols-2 gap-x-4 gap-y-3 mb-8 flex-1 text-left border-t border-slate-200/20 pt-6">
               {plan.features.map((f, j) => (
-                <li key={j} className="flex items-start gap-2 text-sm">
-                  <Check className="w-4 h-4 shrink-0 mt-0.5 opacity-80" />
-                  <span className="opacity-90 font-medium">{f}</span>
+                <li key={j} className="flex items-start gap-2 text-[13px] xl:text-sm">
+                  <Check className="w-4 h-4 shrink-0 mt-0.5 opacity-90 text-green-500" strokeWidth={3} />
+                  <span className="opacity-90 font-medium leading-tight">{f}</span>
                 </li>
               ))}
             </ul>
+
             <button
               onClick={() => { window.location.href = 'https://navixgo.in/plans'; }}
-              className={`w-full py-3 rounded-xl font-bold transition-all active:scale-95 duration-200 select-none ${plan.btn}`}
+              className={`w-full py-3.5 rounded-xl transition-all active:scale-95 duration-200 select-none font-bold text-sm tracking-wide mt-auto ${plan.btn}`}
             >
-              Select Plan
+              {plan.btnText}
             </button>
           </div>
         ))}
       </div>
 
       {/* Comparison Table */}
-      <div className="mb-24 overflow-x-auto pb-4 shadow-sm border border-slate-100 rounded-[2rem] bg-white p-6 md:p-8">
-        <table className="w-full min-w-[800px] border-collapse">
+      <div className="mb-24 overflow-x-auto shadow-sm border border-slate-200 rounded-[2rem] bg-white p-6 md:p-10">
+        <div className="mb-8 text-left">
+          <h2 className="text-2xl font-bold font-satoshi text-slate-900">Compare Features & Services</h2>
+          <p className="text-slate-500 text-sm mt-1">See exactly what is included in every plan.</p>
+        </div>
+        <table className="w-full min-w-[900px] border-collapse text-left">
           <thead>
-            <tr className="border-b border-slate-200 select-none">
-              <th className="py-6 px-4 text-left text-lg font-bold text-slate-900 w-1/4">Platform Features</th>
+            <tr className="border-b-2 border-slate-100 select-none">
+              <th className="py-4 px-4 text-xs tracking-wider uppercase font-bold text-slate-400 w-1/4">Feature</th>
               {plansData.map((p) => (
-                <th key={p.name} className="py-6 px-4 text-center font-bold text-slate-900">
+                <th key={p.name} className="py-4 px-4 text-center font-bold text-slate-900 text-sm">
                   {p.name}
                 </th>
               ))}
             </tr>
           </thead>
           <tbody>
-            {featureTable.map((row, i) => (
-              <tr key={i} className="border-b border-slate-100 hover:bg-slate-50 transition-colors">
-                <td className="py-4 px-4 text-sm font-semibold text-slate-700 text-left">{row.name}</td>
-                {row.vals.map((val, j) => (
-                  <td key={j} className="py-4 px-4 text-center">
-                    {val ? (
-                      <div className="w-6 h-6 rounded-full bg-green-100 flex items-center justify-center mx-auto text-green-600">
-                        <Check size={14} strokeWidth={3} />
-                      </div>
-                    ) : (
-                      <div className="w-6 h-6 flex items-center justify-center mx-auto text-slate-300">
-                        <Minus size={16} strokeWidth={3} />
-                      </div>
-                    )}
+            {featureCategories.map((categoryGroup, idx) => (
+              <React.Fragment key={idx}>
+                {/* Category Header */}
+                <tr className="bg-slate-50/50">
+                  <td colSpan={6} className="py-5 px-4 text-xs font-bold text-slate-500 tracking-widest uppercase border-t border-slate-100">
+                    {categoryGroup.category}
                   </td>
+                </tr>
+                {/* Features rows */}
+                {categoryGroup.features.map((row, i) => (
+                  <tr key={i} className="border-t border-slate-100 hover:bg-slate-50/50 transition-colors">
+                    <td className="py-4 px-4 text-sm font-600 text-slate-700">{row.name}</td>
+                    {row.vals.map((val, j) => (
+                      <td key={j} className="py-4 px-4 text-center">
+                        {val ? (
+                          <div className="w-6 h-6 rounded-full bg-green-100 flex items-center justify-center mx-auto text-green-600">
+                            <Check size={14} strokeWidth={3} />
+                          </div>
+                        ) : (
+                          <div className="w-6 h-6 flex items-center justify-center mx-auto text-slate-200">
+                            <Minus size={16} strokeWidth={3} />
+                          </div>
+                        )}
+                      </td>
+                    ))}
+                  </tr>
                 ))}
-              </tr>
+              </React.Fragment>
             ))}
           </tbody>
         </table>
       </div>
 
       {/* Value Props matched to the design style */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-16 mb-24 max-w-5xl 3xl:max-w-6xl mx-auto text-center">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-16 mb-24 max-w-5xl mx-auto text-center">
         <div className="hover:-translate-y-1 transition-transform duration-300">
           <div className="w-16 h-16 bg-blue-50 text-[#0056b3] rounded-full flex items-center justify-center mx-auto mb-6 shrink-0">
             <School size={32} />
           </div>
-          <h3 className="text-2xl font-bold text-slate-900 mb-3 3xl:text-3xl">Perfect For Institutions</h3>
-          <p className="text-slate-600 font-medium 3xl:text-lg">
-            Ideal for Schools, Colleges, Universities, and Campus Transport Services looking to digitize their fleets
-            affordably.
+          <h3 className="text-2xl font-600 font-satoshi text-slate-900 mb-3">Perfect For Institutions</h3>
+          <p className="text-slate-600 font-medium">
+            Ideal for Schools, Colleges, Universities, and Campus Transport Services looking to digitize their fleets affordably.
           </p>
         </div>
         <div className="hover:-translate-y-1 transition-transform duration-300">
           <div className="w-16 h-16 bg-orange-50 text-[#ea580c] rounded-full flex items-center justify-center mx-auto mb-6 shrink-0">
             <Smartphone size={32} />
           </div>
-          <h3 className="text-2xl font-bold text-slate-900 mb-3 3xl:text-3xl">Why NavixGo?</h3>
-          <p className="text-slate-600 font-medium 3xl:text-lg">
-            No expensive GPS hardware required. Driver smartphone acts as a live GPS tracker with real-time WebSocket
-            architecture.
+          <h3 className="text-2xl font-600 font-satoshi text-slate-900 mb-3">Why NavixGo?</h3>
+          <p className="text-slate-600 font-medium">
+            No expensive GPS hardware required. Driver smartphone acts as a live GPS tracker with real-time WebSocket architecture.
           </p>
         </div>
       </div>
 
       {/* Pitch CTA */}
-      <div className="bg-[#f8fafc] rounded-[3rem] p-12 text-center max-w-4xl 3xl:max-w-5xl mx-auto border border-slate-100 shadow-sm mt-12">
-        <div className="w-12 h-12 bg-[#ea580c] text-white rounded-xl flex items-center justify-center mx-auto mb-6 shadow-lg shadow-orange-500/30 shrink-0">
+      <div className="bg-gradient-to-br from-slate-900 to-[#0b101e] rounded-[3rem] p-12 text-center max-w-4xl mx-auto shadow-2xl mt-12 relative overflow-hidden">
+        <div className="absolute inset-0 opacity-10" style={{ background: 'radial-gradient(circle at top right, #ea580c 0%, transparent 40%)' }}></div>
+        <div className="w-12 h-12 bg-white/10 text-white rounded-xl flex items-center justify-center mx-auto mb-6 backdrop-blur-sm shrink-0 border border-white/20 relative z-10">
           <Bus size={24} />
         </div>
-        <h2 className="text-2xl md:text-3xl 3xl:text-4xl font-extrabold text-slate-900 mb-8 leading-snug">
+        <h2 className="text-2xl md:text-3xl font-700 font-satoshi text-white mb-8 leading-snug relative z-10">
           “NavixGo is a smart campus transport platform that enables institutions to provide real-time bus tracking,
-          ETA updates, and student notifications using driver smartphones as live GPS devices.”
+          ETA updates, and student notifications using driver smartphones.”
         </h2>
         <button
           onClick={() => { window.location.href = 'https://navixgo.in/plans'; }}
-          className="bg-[#0056b3] text-white px-10 py-4 rounded-full font-bold hover:bg-[#004494] active:scale-95 transition-all shadow-md text-lg 3xl:text-xl select-none"
+          className="bg-[#ea580c] text-white px-10 py-4 rounded-full hover:bg-orange-500 active:scale-95 transition-all shadow-lg text-lg select-none relative z-10 font-bold"
         >
-          Start Free Trial Now
+          Start Freemium Now
         </button>
       </div>
     </div>

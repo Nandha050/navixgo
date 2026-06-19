@@ -1,6 +1,6 @@
 import { Users, BookOpen, Compass, Target, Award, Mail, MapPin } from 'lucide-react';
 
-const AboutUs = ({ setCurrentPage }) => {
+const AboutUs = () => {
   const teamMembers = [
     {
       name: 'Maruthi',
@@ -38,11 +38,11 @@ const AboutUs = ({ setCurrentPage }) => {
           </div>
 
           <div className="relative z-10 text-left">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-orange-500/10 text-orange-400 text-xs sm:text-sm font-bold mb-4 border border-orange-500/20">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-orange-500/10 text-orange-400 text-xs sm:text-sm  mb-4 border border-orange-500/20">
               <Users size={16} />
               <span>Our Journey</span>
             </div>
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold mb-4 tracking-tight leading-tight">
+            <h1 className="text-3xl text-white sm:text-4xl lg:text-5xl font-700 font-satoshi mb-4 tracking-tight leading-tight">
               Driving Smarter Transportation
             </h1>
             <p className="text-slate-400 text-sm sm:text-base md:text-lg max-w-3xl font-medium leading-relaxed">
@@ -53,10 +53,10 @@ const AboutUs = ({ setCurrentPage }) => {
 
         {/* Page Content */}
         <div className="space-y-12">
-          
+
           {/* Introduction Card */}
           <div className="bg-white rounded-[2rem] p-6 sm:p-10 border border-slate-100 shadow-[0_15px_35px_-15px_rgba(0,0,0,0.05)] text-left">
-            <div className="prose max-w-none text-slate-600 font-semibold text-sm sm:text-base leading-relaxed space-y-4">
+            <div className="prose max-w-none text-slate-600 font-600 text-sm sm:text-base leading-relaxed space-y-4">
               <p>
                 What started as an idea to solve everyday transport management challenges has now evolved into a modern platform designed for schools, colleges, universities, and organizations that want a better way to manage their fleets and provide live tracking experiences.
               </p>
@@ -71,11 +71,11 @@ const AboutUs = ({ setCurrentPage }) => {
             {/* Our Story */}
             <div className="lg:col-span-7 bg-white rounded-[2rem] p-6 sm:p-8 border border-slate-100 shadow-[0_15px_35px_-15px_rgba(0,0,0,0.05)] text-left flex flex-col justify-between">
               <div className="space-y-4">
-                <h2 className="text-xl sm:text-2xl font-bold text-slate-900 flex items-center gap-3">
+                <h2 className="text-xl sm:text-2xl font-600 font-satoshi text-slate-900 flex items-center gap-3">
                   <span className="p-2 rounded-xl bg-orange-50 text-[#ea580c]"><BookOpen size={20} /></span>
                   <span>Our Story</span>
                 </h2>
-                <div className="text-slate-500 font-semibold text-xs sm:text-sm leading-relaxed space-y-4">
+                <div className="text-slate-500 font-600 text-xs sm:text-sm leading-relaxed space-y-4">
                   <p>
                     NavixGo was built by a passionate team of developers and innovators focused on solving real-world problems using technology.
                   </p>
@@ -91,11 +91,11 @@ const AboutUs = ({ setCurrentPage }) => {
 
             {/* Why NavixGo Checklist */}
             <div className="lg:col-span-5 bg-white rounded-[2rem] p-6 sm:p-8 border border-slate-100 shadow-[0_15px_35px_-15px_rgba(0,0,0,0.05)] text-left">
-              <h2 className="text-xl sm:text-2xl font-bold text-slate-900 mb-6 flex items-center gap-3">
+              <h2 className="text-xl sm:text-2xl font-600 font-satoshi text-slate-900 mb-6 flex items-center gap-3">
                 <span className="p-2 rounded-xl bg-blue-50 text-blue-600"><Award size={20} /></span>
                 <span>Why NavixGo?</span>
               </h2>
-              <ul className="space-y-4 text-slate-700 font-semibold text-xs sm:text-sm">
+              <ul className="space-y-4 text-slate-700 font-600 text-xs sm:text-sm">
                 <li className="flex gap-3">
                   <span className="text-[#ea580c] text-base shrink-0">✓</span>
                   <span>Accuracy and reliability</span>
@@ -126,7 +126,7 @@ const AboutUs = ({ setCurrentPage }) => {
               <div className="p-3 rounded-2xl bg-orange-100 text-[#ea580c] w-fit mb-4">
                 <Target size={24} />
               </div>
-              <h3 className="text-lg sm:text-xl font-bold text-slate-900 mb-2">Our Mission</h3>
+              <h3 className="text-lg sm:text-xl font-600 font-satoshi text-slate-900 mb-2">Our Mission</h3>
               <p className="text-slate-500 font-semibold text-xs sm:text-sm leading-relaxed">
                 To empower institutions and organizations with smart transportation solutions that improve safety, communication, and operational efficiency.
               </p>
@@ -136,7 +136,7 @@ const AboutUs = ({ setCurrentPage }) => {
               <div className="p-3 rounded-2xl bg-blue-100 text-blue-600 w-fit mb-4">
                 <Compass size={24} />
               </div>
-              <h3 className="text-lg sm:text-xl font-bold text-slate-900 mb-2">Our Vision</h3>
+              <h3 className="text-lg sm:text-xl font-600 font-satoshi text-slate-900 mb-2">Our Vision</h3>
               <p className="text-slate-500 font-semibold text-xs sm:text-sm leading-relaxed">
                 To become a trusted technology platform for modern transportation systems by combining innovation, reliability, and user-focused experiences.
               </p>
@@ -146,8 +146,8 @@ const AboutUs = ({ setCurrentPage }) => {
           {/* Meet The Team Section */}
           <div className="bg-white rounded-[2rem] p-6 sm:p-10 border border-slate-100 shadow-[0_15px_35px_-15px_rgba(0,0,0,0.05)] text-left">
             <div className="text-center max-w-xl mx-auto mb-10">
-              <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 mb-2">Meet the Team</h2>
-              <p className="text-slate-400 font-bold text-xs sm:text-sm">
+              <h2 className="text-2xl sm:text-3xl font-700 font-satoshi text-slate-900 mb-2">Meet the Team</h2>
+              <p className="text-slate-400  text-xs sm:text-sm">
                 NavixGo is led by a team passionate about building scalable and impactful technology solutions.
               </p>
             </div>
@@ -161,7 +161,7 @@ const AboutUs = ({ setCurrentPage }) => {
                       {member.name.split(' ').map(n => n[0]).join('')}
                     </div>
                     <div>
-                      <h3 className="text-lg sm:text-xl font-bold text-slate-900">{member.name}</h3>
+                      <h3 className="text-lg sm:text-xl font-600 font-satoshi text-slate-900">{member.name}</h3>
                       <p className="text-[#ea580c] font-extrabold text-xs sm:text-sm uppercase tracking-wider mt-0.5">{member.role}</p>
                     </div>
                     <p className="text-slate-500 font-semibold text-xs sm:text-sm leading-relaxed">
@@ -223,7 +223,7 @@ const AboutUs = ({ setCurrentPage }) => {
 
           {/* Innovation with Purpose */}
           <div className="bg-[#0b101e] rounded-[2rem] sm:rounded-[2.5rem] p-8 sm:p-10 text-white text-left relative overflow-hidden border border-slate-800 shadow-2xl">
-            <h3 className="text-xl sm:text-2xl font-bold mb-3 flex items-center gap-3">
+            <h3 className="text-xl sm:text-2xl font-600 font-satoshi mb-3 flex items-center gap-3 text-white">
               <span>Innovation with Purpose</span>
             </h3>
             <p className="text-slate-300 font-semibold text-xs sm:text-sm sm:leading-relaxed leading-relaxed max-w-4xl">
@@ -234,16 +234,16 @@ const AboutUs = ({ setCurrentPage }) => {
           {/* Office Contact Info Section */}
           <div className="bg-[#eff6ff] rounded-[2rem] p-6 sm:p-8 border border-blue-100 shadow-sm grid grid-cols-1 md:grid-cols-2 gap-6 items-center text-left">
             <div>
-              <h3 className="font-extrabold text-slate-900 text-lg sm:text-xl">Headquarters</h3>
+              <h3 className="font-700 font-satoshi text-slate-900 text-lg sm:text-xl">Headquarters</h3>
               <p className="text-slate-500 text-xs sm:text-sm font-semibold mt-1">Get in touch directly with our leadership team.</p>
             </div>
-            
+
             <div className="space-y-4">
               <div className="flex items-center gap-3">
                 <div className="p-2 rounded-xl bg-white text-[#0056b3] shadow-sm shrink-0">
                   <Mail size={18} />
                 </div>
-                <a href="mailto:navixgosupport@gmail.com" className="text-slate-700 hover:text-[#ea580c] font-bold text-sm sm:text-base transition-colors">
+                <a href="mailto:navixgosupport@gmail.com" className="text-slate-700 hover:text-[#ea580c]  text-sm sm:text-base transition-colors">
                   navixgosupport@gmail.com
                 </a>
               </div>
@@ -251,7 +251,7 @@ const AboutUs = ({ setCurrentPage }) => {
                 <div className="p-2 rounded-xl bg-white text-green-600 shadow-sm shrink-0">
                   <MapPin size={18} />
                 </div>
-                <span className="text-slate-700 font-bold text-sm sm:text-base">
+                <span className="text-slate-700  text-sm sm:text-base">
                   Sangareddy, Telangana, 502001
                 </span>
               </div>

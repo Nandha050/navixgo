@@ -126,7 +126,7 @@ const Home = () => {
 
   const handleGetAccess = (e) => {
     e.preventDefault();
-    window.location.href = 'https://navixgo.in/login/';
+    window.location.href = 'https://admin.navixgo.in/signup/';
   };
 
   return (
@@ -158,7 +158,7 @@ const Home = () => {
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <button
-              onClick={() => { window.location.href = 'https://navixgo.in/login/'; }}
+              onClick={() => { window.location.href = "https://admin.navixgo.in/signup/"; }}
               className="w-full sm:w-auto bg-slate-900 text-white font-semibold font-satoshi px-8 py-3.5 rounded-full hover:bg-slate-800 active:scale-95 transition-colors flex items-center justify-center gap-2 text-base shadow-lg shadow-slate-900/20"
             >
               Get Started Free <ArrowRight size={16} />
@@ -371,7 +371,7 @@ const Home = () => {
             </ul>
 
             <button
-              onClick={() => { window.location.href = 'https://navixgo.in/login/'; }}
+              onClick={() => { window.location.href = 'https://admin.navixgo.in/signup/'; }}
               className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full border-2 border-slate-200 text-slate-700 font-semibold font-satoshi text-sm hover:border-slate-900 hover:text-slate-900 transition-colors"
             >
               Explore Product <ArrowRight size={14} />

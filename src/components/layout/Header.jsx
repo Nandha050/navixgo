@@ -20,7 +20,7 @@ const Header = ({
 
   const handleCTAClick = () => {
     setIsMobileMenuOpen(false);
-    window.location.href = 'https://navixgo.in/login';
+    window.location.href = 'https://admin.navixgo.in/signup/';
   };
 
   return (

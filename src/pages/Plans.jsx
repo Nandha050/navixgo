@@ -208,7 +208,7 @@ const Plans = () => {
               </ul>
 
               <button
-                onClick={() => { window.location.href = 'https://navixgo.in/plans'; }}
+                onClick={() => { window.location.href = 'https://admin.navixgo.in/signup/'; }}
                 className={`w-full py-3.5 rounded-xl transition-all active:scale-95 duration-200 select-none font-bold text-sm tracking-wide mt-auto ${plan.btn}`}
               >
                 {plan.btnText}
@@ -261,7 +261,7 @@ const Plans = () => {
             </ul>
 
             <button
-              onClick={() => { window.location.href = 'https://navixgo.in/plans'; }}
+              onClick={() => { window.location.href = 'https://admin.navixgo.in/signup/'; }}
               className={`w-full py-3.5 rounded-xl transition-all active:scale-95 duration-200 select-none font-bold text-sm tracking-wide mt-auto ${plan.btn}`}
             >
               {plan.btnText}
@@ -354,7 +354,7 @@ const Plans = () => {
           ETA updates, and student notifications using driver smartphones.”
         </h2>
         <button
-          onClick={() => { window.location.href = 'https://navixgo.in/plans'; }}
+          onClick={() => { window.location.href = 'https://admin.navixgo.in/signup/'; }}
           className="bg-[#ea580c] text-white px-10 py-4 rounded-full hover:bg-orange-500 active:scale-95 transition-all shadow-lg text-lg select-none relative z-10 font-bold"
         >
           Start Freemium Now

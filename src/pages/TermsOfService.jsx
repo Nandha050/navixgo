@@ -1,8 +1,14 @@
 import { Scale, Info, Layers, UserCheck, ShieldAlert, BadgeInfo, AlertOctagon, HelpCircle, Eye, Hammer, Clock, Mail } from 'lucide-react';
+import SEO from '../components/SEO';
 
 const TermsOfService = () => {
   return (
     <div className="w-full bg-slate-50 min-h-screen py-16 px-4 sm:px-6 lg:px-8 select-none">
+      <SEO 
+        title="Terms of Service | NavixGo"
+        description="Read NavixGo's Terms of Service governing your use of our real-time bus tracking and campus mobility software."
+        url="https://navixgo.in/terms-of-service"
+      />
       <div className="max-w-5xl mx-auto w-full">
 
         {/* Page Hero */}

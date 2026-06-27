@@ -1,4 +1,5 @@
 import { Users, BookOpen, Compass, Target, Award, Mail, MapPin } from 'lucide-react';
+import SEO from '../components/SEO';
 
 const AboutUs = () => {
   const teamMembers = [
@@ -26,6 +27,32 @@ const AboutUs = () => {
 
   return (
     <div className="w-full bg-slate-50 min-h-screen py-16 px-4 sm:px-6 lg:px-8 select-none">
+      <SEO 
+        title="About NavixGo | Our Mission for Smarter Campus Mobility"
+        description="Learn about the team behind NavixGo, our mission, and why we built our real-time bus tracking software for colleges and organizations."
+        url="https://navixgo.in/about-us"
+        keywords="About NavixGo, Campus Mobility Team, Bus Tracking Software Founders, Institutional Transportation"
+        schemaData={{
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "name": "NavixGo",
+          "url": "https://navixgo.in",
+          "logo": "https://navixgo.in/favicon-512x512.png",
+          "description": "Real-Time Bus Tracking for Smarter Campus Mobility",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Sangareddy",
+            "addressRegion": "Telangana",
+            "postalCode": "502001",
+            "addressCountry": "IN"
+          },
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "email": "navixgosupport@gmail.com",
+            "contactType": "customer support"
+          }
+        }}
+      />
       <div className="max-w-6xl mx-auto w-full">
 
         {/* Page Hero */}

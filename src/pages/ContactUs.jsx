@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Mail, Phone, MapPin, Clock, HelpCircle, Send, CheckCircle2 } from 'lucide-react';
+import SEO from '../components/SEO';
 
 const ContactUs = () => {
   const [formData, setFormData] = useState({
@@ -94,6 +95,36 @@ const ContactUs = () => {
 
   return (
     <div className="w-full bg-slate-50 min-h-screen py-16 px-4 sm:px-6 lg:px-8 select-none">
+      <SEO 
+        title="Contact NavixGo | Get in Touch with Our Team"
+        description="Contact the NavixGo team for product demonstrations, technical support, and partnership inquiries regarding our campus mobility platform."
+        url="https://navixgo.in/contact-us"
+        keywords="Contact NavixGo, Support, Transportation Software Support, Campus Mobility Contact"
+        schemaData={{
+          "@context": "https://schema.org",
+          "@type": "ContactPage",
+          "name": "Contact NavixGo",
+          "url": "https://navixgo.in/contact-us",
+          "description": "Contact form for NavixGo real-time bus tracking and campus mobility platform.",
+          "mainEntity": {
+            "@type": "Organization",
+            "name": "NavixGo",
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Sangareddy",
+              "addressRegion": "Telangana",
+              "postalCode": "502001",
+              "addressCountry": "IN"
+            },
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "telephone": "+91-9949445524",
+              "email": "navixgosupport@gmail.com",
+              "contactType": "customer support"
+            }
+          }
+        }}
+      />
       <div className="max-w-6xl mx-auto w-full">
 
         {/* Page Hero */}

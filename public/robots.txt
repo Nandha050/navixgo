@@ -1,0 +1,13 @@
+User-agent: *
+Allow: /
+
+# Block crawling of specific unnecessary folders or files
+Disallow: /api/
+Disallow: /*?*
+Disallow: /404
+
+# Host
+Host: https://navixgo.in
+
+# Sitemaps
+Sitemap: https://navixgo.in/sitemap.xml

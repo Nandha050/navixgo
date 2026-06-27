@@ -3,9 +3,30 @@
 
 <head>
   <meta charset="UTF-8" />
-  <link rel="icon" type="image/png" href="/favicon.png" />
+  
+  <!-- SEO: Viewport, Theme Color, and Robots -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>navixgo</title>
+  <meta name="theme-color" content="#ea580c" />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="NavixGo" />
+  <meta name="language" content="English" />
+  
+  <!-- Web App Manifest -->
+  <link rel="manifest" href="/manifest.json" />
+
+  <!-- Favicon Links (Multiple sizes for SEO/PWA) -->
+  <link rel="icon" type="image/png" href="/favicon.png" />
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" href="/favicon-192x192.png" />
+
+  <!-- SEO: Preload critical assets -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <!-- Primary Meta Tags (Fallback if Helmet fails) -->
+  <title>NavixGo | Real-Time Bus Tracking for Smarter Campus Mobility</title>
+  <meta name="description" content="NavixGo provides Real-Time Bus Tracking and Campus Mobility software for schools, colleges, and organizations. No GPS hardware required." />
+
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-FMQ76RW1YQ"></script>
   <script>
@@ -24,8 +45,6 @@
     })(window, document, "clarity", "script", "x9u2qu7kfb");
   </script>
   <!-- Google Fonts Poppins -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
     href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
     rel="stylesheet" />
@@ -33,6 +52,7 @@
 </head>
 
 <body>
+  <noscript>You need to enable JavaScript to run this app.</noscript>
   <div id="root"></div>
   <script type="module" src="/src/main.jsx"></script>
 </body>

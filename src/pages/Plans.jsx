@@ -1,4 +1,5 @@
 import React from 'react';
+import SEO from '../components/SEO';
 import { Check, Minus, School, Smartphone, Bus } from 'lucide-react';
 
 const Plans = () => {
@@ -172,16 +173,28 @@ const Plans = () => {
 
   return (
     <div className="pt-12 pb-20 px-4 sm:px-6 lg:px-8 max-w-7xl 2xl:max-w-[1600px] mx-auto w-full overflow-x-hidden">
-      <div className="text-center mb-16 select-none">
-        <h1 className="text-3xl sm:text-4xl md:text-5xl 3xl:text-6xl font-700 font-satoshi text-slate-900 tracking-tight mb-4">
-          NavixGo Membership Plans
-        </h1>
-        <p className="text-base sm:text-lg md:text-xl text-slate-500 font-medium max-w-2xl mx-auto leading-relaxed">
-          The core platform works great on every plan. Higher plans provide more support, services, and onboarding assistance for a smoother institutional rollout.
-        </p>
-      </div>
-
-      {/* Free Trial Card */}
+      <SEO 
+        title="NavixGo Pricing | Transparent Plans for Campus Mobility"
+        description="View NavixGo's affordable pricing plans for real-time bus tracking. Zero hardware required. Perfect for schools, colleges, and organizations."
+        url="https://navixgo.in/plans"
+        keywords="NavixGo Pricing, Bus Tracking Cost, Fleet Management Pricing, Campus Mobility Plans"
+        schemaData={{
+          "@context": "https://schema.org",
+          "@type": "Product",
+          "name": "NavixGo - Real-Time Bus Tracking",
+          "description": "Real-Time Bus Tracking and Campus Mobility Platform. No hardware required.",
+          "brand": {
+            "@type": "Brand",
+            "name": "NavixGo"
+          },
+          "offers": {
+            "@type": "AggregateOffer",
+            "priceCurrency": "INR",
+            "lowPrice": "300",
+            "offerCount": "4"
+          }
+        }}
+      />
       <div className="flex justify-center mb-16">
         {(() => {
           const plan = plansData[0]; // Freemium

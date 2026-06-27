@@ -1,8 +1,14 @@
 import { Shield, Key, MapPin, Eye, Lock, RefreshCw, Mail, Clock } from 'lucide-react';
+import SEO from '../components/SEO';
 
 const PrivacyPolicy = () => {
   return (
     <div className="w-full bg-slate-50 min-h-screen py-16 px-4 sm:px-6 lg:px-8 select-none">
+      <SEO 
+        title="Privacy Policy | NavixGo"
+        description="Read NavixGo's Privacy Policy to understand how we collect, use, and protect your data on our campus mobility platform."
+        url="https://navixgo.in/privacy-policy"
+      />
       <div className="max-w-5xl mx-auto w-full">
 
         {/* Page Hero */}

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import SEO from '../components/SEO';
 import {
   Bus,
   MapPin,
@@ -131,6 +132,138 @@ const Home = () => {
 
   return (
     <div className="w-full">
+      <SEO 
+        title="NavixGo | Real-Time Bus Tracking for Smarter Campus Mobility"
+        description="NavixGo offers real-time bus tracking and smart campus mobility software for colleges, schools, and shuttle services. No GPS hardware needed."
+        url="https://navixgo.in/"
+        keywords="Real-Time Bus Tracking, Campus Mobility, College Bus Tracking, School Bus Tracking, Fleet Management, Transportation Software, Student Bus Tracking, Bus ETA, Smart Campus, Campus Transportation, Live Bus Tracking, GPS Bus Tracking, Shuttle Tracking"
+        schemaData={{
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "What is NavixGo?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "NavixGo is a Real-Time Bus Tracking and Campus Mobility Platform that allows educational institutions and organizations to track their fleets without expensive GPS hardware."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How does the real-time bus tracking work?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "It transforms any driver's smartphone into a live GPS tracker. The driver app broadcasts the location, and students or employees can track the bus on a live Google Map via the passenger app."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Is dedicated GPS hardware required?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "No, NavixGo requires zero hardware installation. It operates entirely through the driver's smartphone, making it a highly cost-effective fleet management solution."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Who can use NavixGo?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "NavixGo is designed for colleges, universities, schools, corporate organizations, and shuttle services looking for reliable institutional transportation software."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Does NavixGo provide ETA for buses?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes, our smart campus software provides live ETA countdowns to specific stops with 99.8% accuracy based on real-time traffic and GPS sync."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Can passengers receive notifications?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes, passengers receive smart alerts such as 'Bus Near Your Stop' and delay notices, which they can customize completely within the student bus tracking app."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What features does the Admin Dashboard include?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Administrators get full fleet visibility across all routes, trip history, instant alerts for fleet issues, and passenger/driver management."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Is the app available on both iOS and Android?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "NavixGo is launching soon and will be available as a cross-platform mobile application, accessible on Android via Google Play and iOS via the App Store."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How quickly can we deploy NavixGo for our campus?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Since there is no hardware to install, deployment is rapid. You can set up your entire fleet in hours rather than weeks."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Is NavixGo secure?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes, we prioritize security and privacy, ensuring that live location data is only accessible to authorized passengers and administrators."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Can we manage multiple routes simultaneously?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Absolutely. The platform is designed for scalable fleet management, allowing admins to oversee multiple routes and buses concurrently."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How does it help reduce student wait times?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "By providing real-time visibility and accurate ETA countdowns, students know exactly when to leave for their stop, eliminating long waits in bad weather."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What happens if a driver loses internet connection?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "The app caches location points locally and syncs them automatically to the server the moment the connection is restored."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Does the app consume a lot of battery?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "The driver app is heavily optimized for background efficiency to minimize battery drain while ensuring a consistent GPS broadcast."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How do I get early access?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "You can sign up for early access on our website by entering your email address, or by visiting our admin signup portal."
+              }
+            }
+          ]
+        }}
+      />
 
       {/* ══════════════════════════════════════════
           HERO
@@ -697,6 +830,49 @@ const Home = () => {
           </div>
         </div>
       </div>
+
+      {/* ══════════════════════════════════════════
+          SEO FAQ SECTION
+      ══════════════════════════════════════════ */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto border-t border-slate-100">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl sm:text-4xl font-bold font-satoshi text-slate-900 tracking-tight mb-4">
+            Frequently Asked Questions
+          </h2>
+          <p className="text-slate-500 text-lg">
+            Everything you need to know about NavixGo's real-time bus tracking.
+          </p>
+        </div>
+        <div className="space-y-6">
+          {[
+            {
+              q: "What is NavixGo?",
+              a: "NavixGo is a Real-Time Bus Tracking and Campus Mobility Platform that allows educational institutions and organizations to track their fleets without expensive GPS hardware."
+            },
+            {
+              q: "How does the real-time bus tracking work?",
+              a: "It transforms any driver's smartphone into a live GPS tracker. The driver app broadcasts the location, and students or employees can track the bus on a live Google Map via the passenger app."
+            },
+            {
+              q: "Is dedicated GPS hardware required?",
+              a: "No, NavixGo requires zero hardware installation. It operates entirely through the driver's smartphone, making it a highly cost-effective fleet management solution."
+            },
+            {
+              q: "Who can use NavixGo?",
+              a: "NavixGo is designed for colleges, universities, schools, corporate organizations, and shuttle services looking for reliable institutional transportation software."
+            },
+            {
+              q: "Does NavixGo provide ETA for buses?",
+              a: "Yes, our smart campus software provides live ETA countdowns to specific stops with 99.8% accuracy based on real-time traffic and GPS sync."
+            }
+          ].map((faq, i) => (
+            <div key={i} className="bg-white rounded-2xl p-6 border border-slate-100 shadow-sm">
+              <h4 className="font-bold font-satoshi text-slate-900 text-lg mb-2">{faq.q}</h4>
+              <p className="text-slate-500 text-sm leading-relaxed m-0">{faq.a}</p>
+            </div>
+          ))}
+        </div>
+      </section>
 
       {/* ══════════════════════════════════════════
           BOTTOM CTA

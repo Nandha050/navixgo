@@ -20,7 +20,7 @@ const Header = ({
 
   const handleCTAClick = () => {
     setIsMobileMenuOpen(false);
-    window.location.href = 'https://admin.navixgo.in/signup/';
+    navigate('/contact-us');
   };
 
   return (
@@ -73,7 +73,7 @@ const Header = ({
               transition={{ duration: 0.25, ease: 'easeOut' }}
               className="hidden md:inline-flex group items-center justify-center gap-3 rounded-full bg-[#0F1115] px-5 py-3 text-sm font-600 font-satoshi text-white shadow-[0_8px_20px_rgba(0,0,0,0.18)] transition-all duration-300"
             >
-              <span>Free Demo</span>
+              <span>Request a Free Demo</span>
               <span className="flex h-9 w-9 items-center justify-center rounded-full bg-white/12 transition-all duration-300">
                 <ArrowUpRight size={16} />
               </span>
@@ -117,7 +117,7 @@ const Header = ({
                     onClick={handleCTAClick}
                     className="w-full rounded-2xl bg-slate-950 px-4 py-3 text-base font-600 font-satoshi text-white transition-all duration-300 hover:bg-slate-900"
                   >
-                    Free Demo
+                    Request a Free Demo
                   </button>
                 </div>
               </div>

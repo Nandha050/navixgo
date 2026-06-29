@@ -106,7 +106,7 @@ const TABS = [
     screenshot: screenshotDashboard,
     accentColor: '#059669',
     title: 'Full fleet visibility for admins',
-    desc: 'Administrators monitor every vehicle, route, and trip in real time from a single web dashboard — no hardware, no installation.',
+    desc: 'Never get another panicked call from a parent asking where the bus is. Monitor every vehicle and trip in real time — no hardware, no installation.',
     bullets: [
       'Live fleet map across all routes',
       'Trip history & analytics',
@@ -132,7 +132,7 @@ const Home = () => {
 
   return (
     <div className="w-full">
-      <SEO 
+      <SEO
         title="NavixGo | Real-Time Bus Tracking for Smarter Campus Mobility"
         description="NavixGo offers real-time bus tracking and smart campus mobility software for colleges, schools, and shuttle services. No GPS hardware needed."
         url="https://navixgo.in/"
@@ -274,14 +274,14 @@ const Home = () => {
           {/* Badge */}
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-orange-50 border border-orange-200 mb-8">
             <span className="w-2 h-2 rounded-full bg-orange-500" />
-            <span className="text-orange-700 text-sm font-semibold font-satoshi">Zero Hardware Installation Required</span>
+            <span className="text-orange-700 text-base font-semibold font-satoshi">Zero Hardware Installation Required</span>
           </div>
 
-          <h1 className="text-5xl sm:text-6xl font-bold font-satoshi text-slate-900 tracking-tight leading-[1.1] mb-5">
-            Campus Transportation.
+          <h1 className="text-6xl sm:text-6xl font-bold font-satoshi text-slate-900 tracking-tight leading-[1.1] mb-5">
+            Campus Bus Tracking.
             {' '}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-blue-600">
-              Reimagined.
+              No Hardware. No Guessing.
             </span>
           </h1>
 
@@ -291,10 +291,10 @@ const Home = () => {
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <button
-              onClick={() => { window.location.href = "https://admin.navixgo.in/signup/"; }}
+              onClick={() => navigate('/contact-us')}
               className="w-full sm:w-auto bg-slate-900 text-white font-semibold font-satoshi px-8 py-3.5 rounded-full hover:bg-slate-800 active:scale-95 transition-colors flex items-center justify-center gap-2 text-base shadow-lg shadow-slate-900/20"
             >
-              Get Started Free <ArrowRight size={16} />
+              Request a Pilot Program <ArrowRight size={16} />
             </button>
             <button
               onClick={() => navigate('/plans')}
@@ -326,7 +326,7 @@ const Home = () => {
             {/* Soft glow behind image */}
             <div className="absolute inset-0 rounded-full blur-3xl opacity-30 pointer-events-none"
               style={{ background: 'radial-gradient(ellipse,rgba(37,99,235,.4),transparent)' }} />
-            <img src={screenshotDashboard} alt="NavixGo live tracking" className="relative z-10 w-full h-auto object-contain rounded-xl sm:rounded-2xl lg:rounded-3xl shadow-[0_20px_60px_-15px_rgba(0,0,0,0.1)] border border-slate-200/50" />
+            <img src={screenshotDashboard} fetchPriority="high" alt="NavixGo live tracking" className="relative z-10 w-full h-auto object-contain rounded-xl sm:rounded-2xl lg:rounded-3xl shadow-[0_20px_60px_-15px_rgba(0,0,0,0.1)] border border-slate-200/50" />
           </div>
 
           {/* Right chips */}
@@ -364,7 +364,7 @@ const Home = () => {
             Who Can Use NavixGo?
           </h2>
           <p className="text-lg text-slate-500 leading-relaxed">
-            Designed for modern institutions and organizations that need smarter, more transparent transportation management.
+            If your students are guessing when their bus arrives, parents are flooding your office with calls, and your drivers have no way to flag delays — NavixGo fixes all three. No hardware. No IT project. Live in hours.
           </p>
         </div>
 
@@ -747,7 +747,7 @@ const Home = () => {
               Full fleet visibility. Zero hardware.
             </h2>
             <p className="text-slate-500 text-base leading-relaxed mb-8">
-              Administrators monitor every vehicle, route, and trip in real time from a single web dashboard. Add buses, manage routes, and respond to incidents instantly.
+              Never get another panicked call from a parent asking where the bus is. Monitor every vehicle and trip in real time from a single web dashboard. Add buses, manage routes, and respond to incidents instantly.
             </p>
 
             <div className="space-y-5 mb-8">
@@ -810,26 +810,6 @@ const Home = () => {
         </div>
       </section>
 
-      {/* ══════════════════════════════════════════
-          DOWNLOAD
-      ══════════════════════════════════════════ */}
-      <div id="download-area" className="py-16 text-center flex flex-col items-center">
-        <h3 className="text-2xl sm:text-3xl font-bold font-satoshi text-slate-900 mb-6 tracking-tight">
-          Download the NavixGo App
-        </h3>
-        <div className="relative inline-block">
-          {/* Badge */}
-          <div className="absolute -top-3.5 -right-4 sm:-right-6 z-10">
-            <div className="bg-orange-500 text-white text-[11px] sm:text-xs font-bold font-satoshi px-3 py-1 rounded-full shadow-md border-2 border-white whitespace-nowrap">
-              Launching Soon 🚀
-            </div>
-          </div>
-
-          <div className="flex items-center gap-3 bg-slate-100 px-6 py-3.5 sm:px-8 sm:py-4 rounded-2xl border border-slate-200 cursor-not-allowed select-none">
-            <img src={googleIcon} height={20} alt="Get it on Google Play" className="w-24 sm:w-32 h-auto object-contain opacity-40 grayscale" />
-          </div>
-        </div>
-      </div>
 
       {/* ══════════════════════════════════════════
           SEO FAQ SECTION

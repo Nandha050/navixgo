@@ -13,7 +13,7 @@ const Footer = ({ controlRoomUnlocked }) => {
               <Logo onClick={() => navigate('/')} dark={true} />
             </div>
             <p className="text-slate-400 text-sm 3xl:text-base leading-relaxed max-w-xs font-medium font-inter">
-              Genuine tales from entrepreneurs who revolutionized their companies. Discover how they turned challenges into success.
+              Trusted by institutions across campuses to keep students safe and administrators sane.
             </p>
           </div>
           <div>
